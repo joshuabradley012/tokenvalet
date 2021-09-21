@@ -33,7 +33,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
-      title: '',
+      title: 'Valet.0',
       template: path.resolve(__dirname, 'client/index.html'),
     }),
   ],
