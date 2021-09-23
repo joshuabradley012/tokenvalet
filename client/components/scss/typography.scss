@@ -44,6 +44,7 @@ h5, .h5 {
 h6, .h6 {
   color: $dark-grey;
   font-size: $small-font-size;
+  font-weight: 400;
   letter-spacing: .025em;
   text-transform: uppercase;
 }
@@ -74,6 +75,7 @@ blockquote {
   cite {
     display: block;
     font-style: normal;
+    margin: $spacer-2 0 0 ;
   }
 }
 

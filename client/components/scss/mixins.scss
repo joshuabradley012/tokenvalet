@@ -7,6 +7,7 @@
   color: $white;
   cursor: pointer;
   display: inline-block;
+  line-height: 1;
   margin: 0 0 $spacer-4;
   padding: $spacer-2 $spacer-4;
   text-align: center;
@@ -25,6 +26,7 @@
   color: $black;
   display: block;
   font-family: $main-font;
+  line-height: 1;
   margin: 0 0 $spacer-4;
   padding: ($spacer-2 - $spacer-0_25) $spacer-2;
   width: 100%;
