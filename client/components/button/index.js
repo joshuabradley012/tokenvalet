@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.scss';
 
-const Button = () => {
+const Button = ({ href, children }) => {
   return (
-    <a className="btn" href="#">This is a test</a>
+    <a className="btn" href={href}>{children}</a>
   );
 };
 

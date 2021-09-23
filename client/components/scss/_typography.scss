@@ -1,0 +1,150 @@
+@use "variables" as * ;
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $main-font;
+  font-weight: 700;
+  line-height: $line-height-sm;
+  margin: $spacer-8 0 $spacer-4;
+}
+
+h1, .h1 {
+  color: $black;
+  font-size: 2em;
+}
+
+h2, .h2 {
+  color: $black;
+  font-size: 1.5em;
+}
+
+h3, .h3 {
+  color: $black;
+  font-size: 1.2em;
+}
+
+h4, .h4 {
+  color: $black;
+  font-size: 1em;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+h5, .h5 {
+  color: $dark-grey;
+  font-size: 1em;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+h6, .h6 {
+  color: $dark-grey;
+  font-size: $small-font-size;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+p {
+  margin: $spacer-4 0;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+cite {
+  color: $dark-grey;
+  font-size: $small-font-size;
+}
+
+blockquote {
+  font-style: italic;
+  margin: $spacer-4 $spacer-5;
+
+  cite {
+    display: block;
+    font-style: normal;
+  }
+}
+
+code {
+  color: $black;
+  font-family: $mono-font;
+}
+
+data::after {
+  content: ' (ID ' attr(value) ')';
+  display: none;
+  font-size: $small-font-size;
+
+  &:hover {
+    display: inline;
+  }
+}
+
+figure {
+  margin: $spacer-4 0;
+  text-align: center;
+}
+
+figcaption {
+  > * {
+    color: $dark-grey;
+    font-size: $small-font-size;
+    font-weight: 400;
+    text-align: right;
+    text-transform: none;
+    margin: $spacer-2 0 $spacer-4;
+  }
+}
+
+del {
+  color: $dark-grey;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $grey;
+  margin: $spacer-4 0;
+}
+
+ul,
+ol {
+  padding: 0 0 0 $spacer-5;
+
+  li {
+    margin: $spacer-1 0;
+  }
+}
+
+// Mathjax
+mjx-container {
+  overflow: scroll;
+}
+
+pre {
+  background: $white !important;
+  overflow: scroll;
+  padding: 0;
+
+  code {
+    background: transparent;
+    padding: 0;
+  }
+}
+
+var {
+  font-family: $sub-font;
+  font-weight: 600;
+}
+

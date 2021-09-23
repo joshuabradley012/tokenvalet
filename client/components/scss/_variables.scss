@@ -1,7 +1,34 @@
 $black: #000;
+$black-hover: #555;
 $white: #fff;
+$grey: #d1d1d1;
+$dark-grey: #a0a0a0;
+$light-blue: #80bdff;
 
 $main-font: system-ui ,-apple-system, Helvetica, Arial, sans-serif;
 $sub-font: Georgia, serif;
 $mono-font: Courier, monospace;
+$small-font-size: .8em;
+
+$line-height: 1.375;
+$line-height-sm: 1.1;
+
+$transition-time: .15s ease-in-out;
+$transition-all: all $transition-time;
+
+// 4px after font-size adjusted to 62.5% on html
+$spacing-base: .4rem;
+
+$spacer-0_25: $spacing-base / 4;
+$spacer-0_5: $spacing-base / 2;
+
+$spacer-1: $spacing-base;
+$spacer-1_5: $spacing-base * 1.5;
+$spacer-2: $spacing-base * 2;
+$spacer-3: $spacing-base * 3;
+$spacer-4: $spacing-base * 4;
+$spacer-5: $spacing-base * 5;
+$spacer-6: $spacing-base * 6;
+$spacer-7: $spacing-base * 7;
+$spacer-8: $spacing-base * 8;
 

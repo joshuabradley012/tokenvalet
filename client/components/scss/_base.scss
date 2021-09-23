@@ -1,13 +1,10 @@
 @use "variables" as * ;
-@use "mixins" as * ;
 
 html {
-  -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   color: $black;
   font-family: $main-font;
   font-size: 62.5%;
-  line-height: 1.375;
 }
 
 *,
@@ -16,60 +13,19 @@ html {
   box-sizing: inherit;
 }
 
+*:focus {
+  border-color: $light-blue;
+  box-shadow: 0 0 0 $spacer-1 rgb(0 123 255 / 25%);
+  outline: 0;
+}
+
 body {
   font-size: 1.6rem;
-  margin: 0;
-}
-
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -.25em;
-}
-
-sup {
-  top: -.5em;
 }
 
 img {
-  border-style: none;
   height: auto;
   max-width: 100%;
-}
-
-input {
-  color: $black;
-  font-family: $sub-font;
-  font-size: .7em;
-  box-sizing: border-box;
-}
-
-input {
-  border: 1px solid #d1d1d1;
-}
-
-button {
-  @include button;
-}
-
-[hidden] {
-  display: none;
 }
 
 label[hidden] {
@@ -82,3 +38,4 @@ label[hidden] {
   width: 1px;
   word-wrap: normal!important;
 }
+

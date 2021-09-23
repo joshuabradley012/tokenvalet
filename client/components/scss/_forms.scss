@@ -1,0 +1,23 @@
+@use "variables" as * ;
+@use "mixins" as * ;
+
+input,
+select,
+textarea {
+  @include input;
+}
+
+label {
+  display: inline-block;
+  font-size: $small-font-size;
+  margin: 0 0 $spacer-1;
+}
+
+button,
+input[type="button"],
+input[type="file"],
+input[type="reset"],
+input[type="submit"] {
+  @include button;
+}
+
