@@ -1,5 +1,15 @@
 @use "variables" as * ;
-@use "mixins" as * ;
+@use "mixins/forms" as * ;
+
+form {
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
 
 input,
 select,
@@ -7,9 +17,13 @@ textarea {
   @include input;
 }
 
+textarea {
+  line-height: $line-height;
+}
+
 label {
   display: inline-block;
-  font-size: $small-font-size;
+  font-size: $font-size-sm;
   line-height: 1;
   margin: 0 0 $spacer-1;
 }

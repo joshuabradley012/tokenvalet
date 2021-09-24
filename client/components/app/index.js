@@ -1,6 +1,6 @@
 import React from 'react';
-import Ui from '../ui';
 import './style.scss';
+import Ui from '../ui';
 
 const App = () => {
   return (

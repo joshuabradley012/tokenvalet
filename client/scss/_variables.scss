@@ -1,0 +1,106 @@
+$variable-prefix: v-;
+$enable-important-utilities: false;
+
+$black: #000;
+$black-hover: #555;
+$white: #fff;
+$grey: #d1d1d1;
+$dark-grey: #a0a0a0;
+$light-blue: #80bdff;
+
+$box-shadow: 0 .8rem 1.6rem rgba($black, .15);
+$box-shadow-sm: 0 .2rem .4rem rgba($black, .075);
+$box-shadow-lg: 0 1.6rem 4.8rem rgba($black, .175);
+$box-shadow-inset: 0 1px 2px rgba($black, .075);
+
+$main-font: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+$sub-font: Georgia, serif;
+$mono-font: Courier, monospace;
+$font-size: 1.6rem;
+$font-size-sm: .8em;
+
+$line-height: 1.375;
+$line-height-sm: 1.1;
+
+$transition-time: .15s ease-in-out;
+$transition-all: all $transition-time;
+
+$spacer: .4rem;
+
+$spacer-0_25: $spacer * 0.25;
+$spacer-0_5: $spacer * 0.5;
+$spacer-1: $spacer;
+$spacer-1_5: $spacer * 1.5;
+$spacer-2: $spacer * 2;
+$spacer-2_5: $spacer * 2.5;
+$spacer-3: $spacer * 3;
+$spacer-3_5: $spacer * 3.5;
+$spacer-4: $spacer * 4;
+$spacer-5: $spacer * 5;
+$spacer-6: $spacer * 6;
+$spacer-7: $spacer * 7;
+$spacer-8: $spacer * 8;
+$spacer-9: $spacer * 9;
+$spacer-10: $spacer * 10;
+$spacer-11: $spacer * 11;
+$spacer-12: $spacer * 12;
+$spacer-13: $spacer * 13;
+$spacer-14: $spacer * 14;
+$spacer-15: $spacer * 15;
+$spacer-16: $spacer * 16;
+
+$spacers: (
+  0: 0,
+  0_25: $spacer-0_25,
+  0_5: $spacer-0_5,
+  1: $spacer-1,
+  1_5: $spacer-1_5,
+  2: $spacer-2,
+  2_5: $spacer-2_5,
+  3: $spacer-3,
+  3_5: $spacer-3_5,
+  4: $spacer-4,
+  5: $spacer-5,
+  6: $spacer-6,
+  7: $spacer-7,
+  8: $spacer-8,
+  9: $spacer-9,
+  10: $spacer-10,
+  11: $spacer-11,
+  12: $spacer-12,
+  13: $spacer-13,
+  14: $spacer-14,
+  15: $spacer-15,
+  16: $spacer-16,
+);
+
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+$grid-columns: 12;
+$grid-row-columns: 6;
+$grid-gutter-width: $spacer-4;
+$container-padding-x: $grid-gutter-width * .5;
+
+$gutters: $spacers;
+

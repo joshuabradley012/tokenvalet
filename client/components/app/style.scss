@@ -1,7 +1,16 @@
-@use '../scss/main';
+@use "../../scss/variables" as *;
 
 #app {
   margin: auto;
+  padding: $spacer-8 0;
   width: 45rem;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
 }
 

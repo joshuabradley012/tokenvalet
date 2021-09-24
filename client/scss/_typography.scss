@@ -43,7 +43,7 @@ h5, .h5 {
 
 h6, .h6 {
   color: $dark-grey;
-  font-size: $small-font-size;
+  font-size: $font-size-sm;
   font-weight: 400;
   letter-spacing: .025em;
   text-transform: uppercase;
@@ -65,7 +65,7 @@ a:focus {
 
 cite {
   color: $dark-grey;
-  font-size: $small-font-size;
+  font-size: $font-size-sm;
 }
 
 blockquote {
@@ -87,7 +87,7 @@ code {
 data::after {
   content: ' (ID ' attr(value) ')';
   display: none;
-  font-size: $small-font-size;
+  font-size: $font-size-sm;
 
   &:hover {
     display: inline;
@@ -102,7 +102,7 @@ figure {
 figcaption {
   > * {
     color: $dark-grey;
-    font-size: $small-font-size;
+    font-size: $font-size-sm;
     font-weight: 400;
     text-transform: none;
     margin: $spacer-2 0 $spacer-4;
@@ -116,7 +116,7 @@ del {
 hr {
   border: 0;
   border-top: 1px solid $grey;
-  margin: $spacer-4 0;
+  margin: $spacer-8 0;
 }
 
 ul,
