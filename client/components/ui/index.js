@@ -16,7 +16,7 @@ const Ui = () => (
     <h6>Hello world!</h6>
     <p>This is some copy in a paragraph tag. Yes it is. This is some copy in a paragraph tag. Yes it is.</p>
     <hr />
-    <form>
+    <form className="shadow-3">
       <label>First</label>
       <input type="text" />
       <label>Second</label>

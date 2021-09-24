@@ -2,6 +2,9 @@
 @use "mixins/forms" as * ;
 
 form {
+  border-radius: $spacer-1;
+  padding: $spacer-4;
+
   :first-child {
     margin-top: 0;
   }
