@@ -1,3 +1,5 @@
+@use "functions" as *;
+
 $variable-prefix: v-;
 $enable-important-utilities: false;
 
@@ -91,6 +93,8 @@ $spacers: (
   15: $spacer-15,
   16: $spacer-16,
 );
+
+$negative-spacers: negativify-map($spacers);
 
 $position-values: (
   0: 0,

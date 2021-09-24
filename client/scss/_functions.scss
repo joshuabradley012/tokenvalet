@@ -4,7 +4,6 @@
 @use "sass:meta";
 @use "sass:math";
 @use "sass:string";
-@use "variables" as *;
 
 @function varify($list) {
   $result: null;
