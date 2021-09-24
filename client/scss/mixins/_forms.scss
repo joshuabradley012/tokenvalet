@@ -2,13 +2,13 @@
 
 @mixin button {
   background-color: $black;
+  border: 0;
   border-radius: $spacer-1;
   box-sizing: border-box;
   color: $white;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
-  margin: 0 0 $spacer-4;
   padding: $spacer-2 $spacer-4;
   text-align: center;
   text-decoration: none;
