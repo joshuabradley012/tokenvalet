@@ -1,5 +1,5 @@
-@use "variables" as * ;
-@use "mixins/forms" as * ;
+@use "variables" as *;
+@use "mixins/forms" as *;
 
 form {
   border-radius: $spacer-1;
