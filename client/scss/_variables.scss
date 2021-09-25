@@ -160,6 +160,7 @@ $spacers: (
 $negative-spacers: negativify-map($spacers);
 
 $border-width: $spacer-0_25;
+$border: $border-width solid $gray-500;
 $border-radius: $spacer-2;
 $border-radius-lg: $spacer-4;
 

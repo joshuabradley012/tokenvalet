@@ -2,7 +2,9 @@
 @use "mixins/forms" as *;
 
 form {
+  background: $white;
   border-radius: $border-radius-lg;
+  border: $border;
   padding: $spacer-4;
 
   > :first-child {
@@ -42,7 +44,7 @@ textarea,
 [type="url"],
 [type="week"] {
   background: $white;
-  border: $border-width solid $gray-500;
+  border: $border;
   border-radius: $border-radius;
   box-sizing: border-box;
   color: $black;
