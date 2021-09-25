@@ -1,10 +1,6 @@
 @use "../../scss/variables" as *;
 
 #app {
-  margin: auto;
-  padding: $spacer-8 0;
-  width: 45rem;
-
   > :first-child {
     margin-top: 0;
   }

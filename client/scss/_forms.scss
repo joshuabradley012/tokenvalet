@@ -2,26 +2,16 @@
 @use "mixins/forms" as *;
 
 form {
-  border-radius: $spacer-1;
+  border-radius: $border-radius-lg;
   padding: $spacer-4;
 
-  :first-child {
+  > :first-child {
     margin-top: 0;
   }
 
-  :last-child {
+  > :last-child {
     margin-bottom: 0;
   }
-}
-
-input,
-select,
-textarea {
-  @include input;
-}
-
-textarea {
-  line-height: $line-height;
 }
 
 label {
@@ -31,11 +21,87 @@ label {
   margin: 0 0 $spacer-1;
 }
 
+input {
+  margin: 0 0 $spacer-4;
+}
+
+select,
+textarea,
+[type="color"],
+[type="date"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="range"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"] {
+  background: $white;
+  border: $border-width solid $gray-500;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  color: $black;
+  display: block;
+  font-family: $main-font;
+  height: $spacer-8;
+  line-height: 1;
+  margin: 0 0 $spacer-4;
+  padding: ($spacer-2 - $border-width * 2) $spacer-2;
+  width: 100%;
+  transition: $transition-all;
+}
+
+textarea {
+  line-height: $line-height;
+  height: auto;
+}
+
+[type="color"] {
+  padding: 0 $spacer-0_5;
+}
+
+.btn,
 button,
-input[type="button"],
-input[type="file"]::file-selector-button,
-input[type="reset"],
-input[type="submit"] {
-  @include button;
+[type="button"],
+[type="file"]::file-selector-button,
+[type="reset"],
+[type="submit"] {
+  background-color: $black;
+  border: 0;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding: $spacer-2 $spacer-4;
+  text-align: center;
+  text-decoration: none;
+  transition: $transition-all;
+
+  &:hover {
+    background-color: $gray-700;
+  }
+}
+
+.btn,
+button,
+[type="checkbox"],
+[type="button"],
+[type="radio"],
+[type="reset"],
+[type="submit"] {
+  & + & {
+    margin-left: $spacer-2;
+  }
+}
+
+[type="file"]::file-selector-button {
+  margin: 0 $spacer-4 0 0;
 }
 

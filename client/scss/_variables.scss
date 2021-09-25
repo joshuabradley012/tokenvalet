@@ -3,12 +3,80 @@
 $variable-prefix: v-;
 $enable-important-utilities: false;
 
-$black: #000;
-$black-hover: #555;
 $white: #fff;
-$grey: #d1d1d1;
-$dark-grey: #a0a0a0;
-$light-blue: #80bdff;
+$gray: #adb5bd;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: $gray;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+
+$colors: (
+  "blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800
+);
+
+$primary: $blue;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 
 $box-shadow-1: 0 1px 2px 0 rgba($black, 0.05);
 $box-shadow-2: 0 1px 3px 0 rgba($black, 0.1), 0 1px 2px 0 rgba($black, 0.06);
@@ -90,6 +158,10 @@ $spacers: (
 );
 
 $negative-spacers: negativify-map($spacers);
+
+$border-width: $spacer-0_25;
+$border-radius: $spacer-2;
+$border-radius-lg: $spacer-4;
 
 $position-values: (
   0: 0,

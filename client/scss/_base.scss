@@ -14,8 +14,8 @@ html {
 }
 
 *:focus {
-  border-color: $light-blue;
-  box-shadow: 0 0 0 $spacer-1 rgb(0 123 255 / 25%);
+  border-color: $blue;
+  box-shadow: 0 0 0 $spacer-1 rgba($blue, 25%);
   outline: 0;
 }
 
@@ -23,9 +23,11 @@ body {
   font-size: $font-size;
 }
 
-img {
+img,
+[type="image"] {
   height: auto;
   max-width: 100%;
+  width: 100%;
 }
 
 label[hidden] {

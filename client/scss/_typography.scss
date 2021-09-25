@@ -35,22 +35,18 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  color: $dark-grey;
+  color: $gray-600;
   font-size: 1em;
   letter-spacing: .025em;
   text-transform: uppercase;
 }
 
 h6, .h6 {
-  color: $dark-grey;
+  color: $gray-600;
   font-size: $font-size-sm;
   font-weight: 400;
   letter-spacing: .025em;
   text-transform: uppercase;
-}
-
-p {
-  margin: $spacer-4 0;
 }
 
 a {
@@ -63,8 +59,39 @@ a:focus {
   text-decoration: none;
 }
 
+p {
+  margin: $spacer-4 0;
+
+  a {
+    color: $primary;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      background: $primary;
+      content: '';
+      display: block;
+      height: $spacer-0_5;
+      opacity: 1;
+      position: absolute;
+      right: 0;
+      bottom: -$spacer-0_5;
+      left: 0;
+      transition: $transition-all;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
 cite {
-  color: $dark-grey;
+  color: $gray-600;
   font-size: $font-size-sm;
 }
 
@@ -101,7 +128,7 @@ figure {
 
 figcaption {
   > * {
-    color: $dark-grey;
+    color: $gray-600;
     font-size: $font-size-sm;
     font-weight: 400;
     text-transform: none;
@@ -110,12 +137,12 @@ figcaption {
 }
 
 del {
-  color: $dark-grey;
+  color: $gray-600;
 }
 
 hr {
   border: 0;
-  border-top: 1px solid $grey;
+  border-top: 1px solid $gray-500;
   margin: $spacer-8 0;
 }
 
