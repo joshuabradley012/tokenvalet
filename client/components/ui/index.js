@@ -26,7 +26,7 @@ const Ui = () => (
           <label>Third</label>
           <input type="text" />
           <label>Fourth - textarea</label>
-          <textarea type="text" />
+          <textarea />
           <input type="button" value="Button" />
           <input type="checkbox" />
           <input type="radio" />
