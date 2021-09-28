@@ -29,7 +29,7 @@ const uploadToS3 = async (fileName, fileBody, fileType = '', encoding = '') => {
       Body: fileBody,
       ContentType: fileType,
       ContentEncoding: encoding,
-      CacheControl: 'max-age=86400'
+      CacheControl: 'max-age=30'
     }));
     console.log(`Successfully uploaded data to ${process.env.AWS_S3_BUCKET}/${fileName}`);
   } catch (err) {

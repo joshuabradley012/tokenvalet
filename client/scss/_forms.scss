@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "mixins/forms" as *;
+@use "mixins/breakpoints" as *;
 
 form {
   background: $white;
@@ -14,17 +15,25 @@ form {
   > :last-child {
     margin-bottom: 0;
   }
+
+  @include media-breakpoint-down(sm) {
+    border: 0;
+    padding: 0;
+  }
 }
 
 label {
   display: inline-block;
   font-size: $font-size-sm;
   line-height: 1;
-  margin: 0 0 $spacer-1;
+  margin: 0 0 $spacer-2;
+  width: 100%;
 }
 
+select,
+textarea,
 input {
-  margin: 0 0 $spacer-4;
+  margin: 0 0 $spacer-5;
 }
 
 select,
@@ -50,12 +59,11 @@ textarea,
   color: $black;
   display: block;
   font-family: $main-font;
-  height: $spacer-8;
+  height: $spacer-10;
   line-height: 1;
-  margin: 0 0 $spacer-4;
-  padding: ($spacer-2 - $border-width * 2) $spacer-2;
-  width: 100%;
+  padding: ($spacer-3 - $border-width * 2) $spacer-2;
   transition: $transition-all;
+  width: 100%;
 }
 
 textarea {
@@ -89,6 +97,10 @@ button,
   &:hover {
     background-color: $gray-700;
   }
+
+  @include media-breakpoint-down(sm) {
+    padding: $spacer-3 $spacer-6;
+  }
 }
 
 .btn,
@@ -99,11 +111,15 @@ button,
 [type="reset"],
 [type="submit"] {
   & + & {
-    margin-left: $spacer-2;
+    margin-left: $spacer-4;
   }
 }
 
-[type="file"]::file-selector-button {
-  margin: 0 $spacer-2 0 0;
+[type="file"] {
+  width: 100%;
+
+  &::file-selector-button {
+    margin: 0 $spacer-2 0 0;
+  }
 }
 
