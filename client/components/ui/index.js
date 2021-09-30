@@ -73,7 +73,7 @@ const Ui = () => (
             <option value="4">Test 4</option>
             <option value="5">Test 5</option>
           </select>
-          <Button href="#">Submit</Button>
+          <Button href="/page">Page</Button>
           <Button href="#">Second</Button>
         </form>
         <hr />

@@ -1,10 +1,13 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './style.scss';
-import Ui from '../ui';
+import Routes from '../routes';
 
 const App = () => {
   return (
-    <Ui />
+    <Router>
+      <Routes />
+    </Router>
   );
 };
 
