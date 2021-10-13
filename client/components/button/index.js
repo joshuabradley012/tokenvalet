@@ -6,7 +6,8 @@ import Link from '../link';
 const Button = ({ href, className, children, ...rest }) => (
   <Link
     className={classNames("btn", className)}
-    href={href} {...rest}
+    href={href}
+    {...rest}
   >
     {children}
   </Link>
