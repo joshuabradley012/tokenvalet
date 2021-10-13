@@ -5,14 +5,14 @@ const Link = ({ href, children, ...rest }) => {
   const regex = new RegExp('^(https?)?\/\/');
   const isInternal = href.search(regex) === -1;
 
-  let button;
+  let link;
   if (isInternal) {
-    button = <RouterLink to={href} {...rest}>{children}</RouterLink>;
+    link = <RouterLink to={href} {...rest}>{children}</RouterLink>;
   } else {
-    button = <a href={href} {...rest}>{children}</a>;
+    link = <a href={href} {...rest}>{children}</a>;
   }
 
-  return button;
+  return link;
 };
 
 export default Link;
