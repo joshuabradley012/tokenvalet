@@ -65,6 +65,7 @@ const Ui = () => (
           <input type="url" />
           <label>Week</label>
           <input type="week" />
+          <label>Select</label>
           <select>
             <option value="">Select an option</option>
             <option value="1">Test 1</option>
