@@ -16,7 +16,6 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 
-
 $grays: (
   "100": $gray-100,
   "200": $gray-200,
@@ -29,7 +28,8 @@ $grays: (
   "900": $gray-900
 );
 
-$blue: #0d6efd;
+$blue: #0072CE;
+$blue-300: shade-color($blue, 30%);
 $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #d63384;
@@ -52,12 +52,14 @@ $colors: (
   "teal": $teal,
   "cyan": $cyan,
   "white": $white,
+  "gray-light": $gray-100,
   "gray": $gray-600,
   "gray-dark": $gray-800
 );
 
-$primary: $blue;
-$secondary: $gray-600;
+$primary: $black;
+$secondary: $blue;
+$secondary-hover: $blue-300;
 $success: $green;
 $info: $cyan;
 $warning: $yellow;
@@ -105,7 +107,7 @@ $font-size-sm: .8em;
 $line-height: 1.375;
 $line-height-sm: 1.1;
 
-$transition-time: .15s ease-in-out;
+$transition-time: .2s ease-in-out;
 $transition-all: all $transition-time;
 
 $spacer: .4rem;
@@ -161,7 +163,7 @@ $negative-spacers: negativify-map($spacers);
 
 $border-width: $spacer-0_25;
 $border: $border-width solid $gray-500;
-$border-radius: $spacer-2;
+$border-radius: $spacer-1;
 $border-radius-lg: $spacer-4;
 
 $position-values: (
@@ -189,7 +191,7 @@ $container-max-widths: (
 
 $grid-columns: 12;
 $grid-row-columns: 6;
-$grid-gutter-width: $spacer-8;
+$grid-gutter-width: $spacer-12;
 $container-padding-x: $grid-gutter-width * .5;
 
 $gutters: $spacers;

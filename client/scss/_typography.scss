@@ -63,12 +63,12 @@ p {
   margin: $spacer-4 0;
 
   a {
-    color: $primary;
+    color: $secondary;
     position: relative;
     text-decoration: none;
 
     &::after {
-      background: $primary;
+      background-color: $secondary;
       content: '';
       display: block;
       height: $spacer-0_5;

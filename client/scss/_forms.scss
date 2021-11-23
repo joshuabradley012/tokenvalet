@@ -61,8 +61,16 @@ textarea,
   height: $spacer-10;
   line-height: 1;
   padding: ($spacer-3 - $border-width * 2) $spacer-2;
-  transition: $transition-all;
   width: 100%;
+
+  &:focus {
+    border-color: $secondary;
+    border-top-width: $spacer-0_5;
+    border-right-width: $spacer-0_5;
+    border-bottom-width: $spacer-0_5;
+    border-left-width: $spacer-0_5;
+    box-shadow: unset;
+  }
 }
 
 textarea {
@@ -80,7 +88,7 @@ button,
 [type="file"]::file-selector-button,
 [type="reset"],
 [type="submit"] {
-  background-color: $black;
+  background-color: $secondary;
   border: 0;
   border-radius: $border-radius;
   box-sizing: border-box;
@@ -94,7 +102,7 @@ button,
   transition: $transition-all;
 
   &:hover {
-    background-color: $gray-700;
+    background-color: $secondary-hover;
   }
 
   @include media-breakpoint-down(sm) {

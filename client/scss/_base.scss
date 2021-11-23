@@ -2,7 +2,7 @@
 
 html {
   box-sizing: border-box;
-  color: $black;
+  color: $primary;
   font-family: $main-font;
   font-size: 62.5%;
 }
@@ -14,8 +14,8 @@ html {
 }
 
 *:focus {
-  border-color: $blue;
-  box-shadow: 0 0 0 $spacer-1 rgba($blue, 25%);
+  border-color: $secondary;
+  box-shadow: 0 0 0 $spacer-1 rgba($secondary, 25%);
   outline: 0;
 }
 
