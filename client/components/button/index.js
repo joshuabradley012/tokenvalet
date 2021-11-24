@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from '../../utils/classnames.js';
+import classNames from '../../lib/classnames.js';
 import './style.scss';
 import Link from '../link';
 

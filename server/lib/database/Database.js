@@ -1,8 +1,8 @@
-require('./env.js');
+require('../../env.js');
 const path = require('path');
 const { Pool } = require('pg');
 
-module.exports = class Connect {
+module.exports = class Database {
   constructor() {
     this.pool = new Pool();
   }

@@ -59,11 +59,11 @@ const uploadFolder = async dir => {
   }
 };
 
-const run = async () => {
+const upload = async () => {
   await s3.createBucket();
   await uploadFolder('./dist');
   process.exit;
 };
 
-run();
+upload();
 
