@@ -1,0 +1,17 @@
+@use "~scss/variables" as *;
+
+.icon-link {
+  display: inline-flex;
+  font-size: 1.4rem;
+  text-decoration: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  .text {
+    margin-left: $spacer-6;
+    color: $primary;
+  }
+}
+

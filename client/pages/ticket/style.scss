@@ -1,0 +1,13 @@
+@use '~scss/variables' as *;
+
+.qr-section {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.qr-wrapper {
+  width: 100%;
+  margin-top: $spacer-9;
+  margin-bottom: $spacer-9;
+}
+

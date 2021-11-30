@@ -15,7 +15,9 @@ module.exports = {
         test: /\.jsx?$/i,
         include: path.resolve(__dirname, 'client'),
         exclude: path.resolve(__dirname, 'node_modules'),
-        loader: 'babel-loader',
+        use: [
+          'babel-loader',
+        ]
       },
       {
         test: /\.scss$/i,
@@ -27,7 +29,28 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ],
+      },
     ],
+  },
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, 'client/assets/'),
+      components: path.resolve(__dirname, 'client/components/'),
+      lib: path.resolve(__dirname, 'client/lib/'),
+      pages: path.resolve(__dirname, 'client/pages/'),
+      scss: path.resolve(__dirname, 'client/scss/'),
+    },
   },
   plugins: [
     new MiniCssExtractPlugin(),

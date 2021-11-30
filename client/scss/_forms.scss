@@ -95,18 +95,15 @@ button,
   color: $white;
   cursor: pointer;
   display: inline-block;
+  font-size: 1.4rem;
   line-height: 1;
-  padding: $spacer-2 $spacer-4;
+  padding: $spacer-3 $spacer-6;
   text-align: center;
   text-decoration: none;
   transition: $transition-all;
 
   &:hover {
     background-color: $secondary-hover;
-  }
-
-  @include media-breakpoint-down(sm) {
-    padding: $spacer-3 $spacer-6;
   }
 }
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../button';
+import Button from 'components/button';
 
-const Ui = () => (
+const ComponentLibrary = () => (
   <div className="container">
     <div className="row justify-content-center">
-      <div className="col-sm-9 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
+      <div className="col-sm-9 col-md-7 col-lg-6 col-xl-5">
         <h1>Hello world!</h1>
         <p>This is some copy in a <a href="#">paragraph tag</a>. Yes it is. This is some copy in a paragraph tag. Yes it is.</p>
         <h2>Hello world!</h2>
@@ -104,5 +104,5 @@ const Ui = () => (
   </div>
 );
 
-export default Ui;
+export default ComponentLibrary;
 

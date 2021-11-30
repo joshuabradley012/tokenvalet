@@ -1,0 +1,7 @@
+@use '~scss/variables' as *;
+
+.qr-wrapper {
+  border-radius: $spacer-4;
+  overflow: hidden;
+  box-shadow: $box-shadow-6;
+}

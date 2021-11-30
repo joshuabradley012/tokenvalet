@@ -1,0 +1,36 @@
+@use "~scss/variables" as *;
+
+.app-drawer {
+  background: $white;
+  height: calc(100vh - $app-bar-height);
+  position: fixed;
+  top: $app-bar-height;
+  right: 100%;
+  width: $app-drawer-width;
+  transition:  $transition-all;
+  z-index: 99;
+
+  &.active {
+    transform: translateX(100%);
+  }
+
+  .icon-link {
+    width: 100%;
+    padding: $spacer-3 0;
+
+    &.active {
+      .icon {
+        color: $secondary;
+
+        .circle {
+          opacity: 1;
+        }
+      }
+
+      .text {
+        color: $secondary;
+      }
+    }
+  }
+}
+

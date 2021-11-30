@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './style.scss';
-import Routes from '../routes';
-import AppShell from '../app-shell';
+import Pages from 'pages';
+import AppShell from 'components/app-shell';
 
 const App = () => {
   return (
     <Router>
       <AppShell>
-        <Routes />
+        <Pages />
       </AppShell>
     </Router>
   );

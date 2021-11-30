@@ -1,5 +1,12 @@
 @use "variables" as * ;
 
+@font-face {
+  font-family: 'Outfit';
+  font-style: bold;
+  font-weight: 700;
+  src: url('~assets/fonts/Outfit-Bold.ttf') format('truetype');
+}
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -62,7 +69,7 @@ a:focus {
 p {
   margin: $spacer-4 0;
 
-  a {
+  a:not(.btn) {
     color: $secondary;
     position: relative;
     text-decoration: none;

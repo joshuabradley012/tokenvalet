@@ -1,11 +1,11 @@
 import React from 'react';
-import classNames from '../../lib/classnames.js';
 import './style.scss';
-import Link from '../link';
+import classNames from 'lib/classnames.js';
+import Link from 'components/link';
 
 const Button = ({ href, className, children, ...rest }) => (
   <Link
-    className={classNames("btn", className)}
+    className={classNames('btn', className)}
     href={href}
     {...rest}
   >
