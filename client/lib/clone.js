@@ -4,7 +4,7 @@ const clone = object => {
   } else if (typeof object === 'object') {
     const copy = {};
     for (let key in object)
-      copy[key] = clone(object[key])
+      copy[key] = clone(object[key]);
     return copy;
   } else {
     return object;

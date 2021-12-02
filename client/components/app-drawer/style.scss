@@ -1,13 +1,15 @@
 @use "~scss/variables" as *;
+@use "~scss/mixins/breakpoints" as *;
 
 .app-drawer {
   background: $white;
-  height: calc(100vh - $app-bar-height);
+  height: calc(100vh);
+  padding-top: $app-bar-height;
   position: fixed;
-  top: $app-bar-height;
+  top: 0;
   right: 100%;
   width: $app-drawer-width;
-  transition:  $transition-all;
+  transition: transform $transition-time;
   z-index: 99;
 
   &.active {
@@ -17,19 +19,25 @@
   .icon-link {
     width: 100%;
     padding: $spacer-3 0;
+  }
 
+  @include media-breakpoint-down(md) {
+    transition: all $transition-time;
+    width: 100%;
+  }
+}
+
+.app-drawer-filler {
+  width: 0;
+  transition: width $transition-time;
+
+  &.active {
+    width: $app-drawer-width;
+  }
+
+  @include media-breakpoint-down(md) {
     &.active {
-      .icon {
-        color: $secondary;
-
-        .circle {
-          opacity: 1;
-        }
-      }
-
-      .text {
-        color: $secondary;
-      }
+      width: 0;
     }
   }
 }

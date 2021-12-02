@@ -9,6 +9,10 @@ $utilities: (
     class: d,
     values: inline inline-block block grid table table-row table-cell flex inline-flex none
   ),
+  "overflow": (
+    property: overflow,
+    values: auto hidden visible scroll,
+  ),
   "shadow": (
     property: box-shadow,
     class: shadow,
