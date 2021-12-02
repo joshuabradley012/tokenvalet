@@ -15,6 +15,8 @@ const AppShell = ({ children }) => {
     if (isMobile) setDrawerOpen(false);
   };
 
+  const handleOpenDrawer = () => setDrawerOpen(!isDrawerOpen);
+
   useEffect(() => {
     if (isMobile && isDrawerOpen) {
       setDrawerOpen(false);
@@ -30,8 +32,6 @@ const AppShell = ({ children }) => {
       document.body.classList.remove('overflow-hidden');
     }
   }, [isDrawerOpen]);
-
-  const handleOpenDrawer = () => setDrawerOpen(!isDrawerOpen);
 
   return (
     <div className="app-shell">
