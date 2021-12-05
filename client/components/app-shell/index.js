@@ -9,7 +9,7 @@ import Social from 'components/social';
 
 const AppShell = ({ children }) => {
   const isMobile = useMobile();
-  const [isDrawerOpen, setDrawerOpen] = useState(true);
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const handleCloseDrawerOnMobileClick = () => {
     if (isMobile) setDrawerOpen(false);
