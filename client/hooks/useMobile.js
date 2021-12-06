@@ -1,11 +1,11 @@
 import { useBreakpoint } from 'hooks';
 
-const mobileSizes = [
+const defaultMobileSizes = [
   'xs',
   'sm',
 ];
 
-const useMobile = () => {
+const useMobile = (mobileSizes = defaultMobileSizes) => {
   const breakpoint = useBreakpoint();
   const isMobile = mobileSizes.includes(breakpoint);
   return isMobile;

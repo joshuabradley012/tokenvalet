@@ -1,16 +1,13 @@
 import React from 'react';
 import './style.scss';
-import classNames from 'lib/classnames';
-import clone from 'lib/clone';
-import { useActivePath } from 'hooks';
-import routesMaster from 'pages/routes';
-import IconLink from 'components/icon-link';
+import { classNames, clone } from 'lib';
+import { IconLink } from 'components';
 
-const routes = clone(routesMaster);
-const home = routes.pop();
 
-const AppDrawer = ({ active, onClick }) => {
+const AppDrawer = ({ active, onClick, routes }) => {
   const activeClassName = active ? 'active' : '';
+  const routesClone = clone(routes);
+  const home = routesClone.pop();
 
   return (
     <>
@@ -18,7 +15,6 @@ const AppDrawer = ({ active, onClick }) => {
       <div className={classNames('app-drawer', activeClassName)}>
         <div className="container-fluid">
           <IconLink
-            className={useActivePath(home.path) ? 'active' : null}
             href={home.path}
             onClick={onClick}
             key={home.name}
@@ -26,9 +22,8 @@ const AppDrawer = ({ active, onClick }) => {
           >
             {home.name}
           </IconLink>
-          {routes.map(route => (
+          {routesClone.map(route => (
             <IconLink
-              className={useActivePath(route.path) ? 'active' : null}
               href={route.path}
               onClick={onClick}
               key={route.name}

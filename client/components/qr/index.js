@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import './style.scss';
 import QRCode from 'qrcode';
+import './style.scss';
 
 const Qr = ({ id = null }) => {
   let svg = '';

@@ -1,14 +1,2 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import routes from 'pages/routes';
-
-const Pages = () => (
-  <Routes>
-    {routes.map(route => (
-      <Route path={route.path} key={route.name} element={route.component} />
-    ))}
-  </Routes>
-);
-
-export default Pages;
-
+export { default as ComponentLibrary } from 'pages/component-library';
+export { default as Ticket } from 'pages/ticket';

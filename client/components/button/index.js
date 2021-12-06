@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
-import classNames from 'lib/classnames.js';
-import Link from 'components/link';
+import { classNames } from 'lib';
+import { Link } from 'components';
 
 const Button = ({ href, className, children, ...rest }) => (
   <Link

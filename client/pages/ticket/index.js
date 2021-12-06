@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.scss';
-import Button from 'components/button';
-import Qr from 'components/qr';
+import { Button, Qr } from 'components';
 
 const Ticket = () => (
   <section className="qr-section">

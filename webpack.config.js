@@ -50,6 +50,7 @@ module.exports = {
       hooks: path.resolve(__dirname, 'client/hooks/'),
       lib: path.resolve(__dirname, 'client/lib/'),
       pages: path.resolve(__dirname, 'client/pages/'),
+      routes: path.resolve(__dirname, 'client/routes/'),
       scss: path.resolve(__dirname, 'client/scss/'),
     },
   },

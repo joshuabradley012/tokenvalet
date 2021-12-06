@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './style.scss';
-import classNames from 'lib/classnames';
-import Icon from 'components/icon';
-import Link from 'components/link';
+import { classNames } from 'lib';
+import { Icon, Link } from 'components';
 
 const IconLink = ({ children, className, href, type, ...rest }) => {
   const [isActive, setActive] = useState(false);

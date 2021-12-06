@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useDimensions, useResize } from 'hooks';
 
 // These values must match $grid-breakpoints from scss/variables
-const breakpoints = {
+const defaultBreakpoints = {
   xs: 0,
   sm: 576,
   md: 768,
@@ -10,39 +11,16 @@ const breakpoints = {
   xxl: 1400,
 };
 
-const getWindowDimensions = () => {
-  const {
-    innerWidth: width,
-    innerHeight: height,
-  } = window;
-  return {
-    width,
-    height,
-  };
-};
+const useBreakpoint = (breakpoints = defaultBreakpoints) => {
+  const { width } = useDimensions(window);
 
-const useBreakpoint = () => {
-  const [breakpoint, setBreakpoint] = useState('');
-
-  useEffect(() => {
-    const handleResize = () => {
-      const { width } = getWindowDimensions();
-
-      let breakpointSize = '';
-      for (let size in breakpoints) {
-        const breakpointWidth = breakpoints[size];
-        if (breakpointWidth > width)
-          break;
-        breakpointSize = size;
-      }
-
-      setBreakpoint(breakpointSize);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  let breakpoint = '';
+  for (let size in breakpoints) {
+    const breakpointWidth = breakpoints[size];
+    if (breakpointWidth > width)
+      break;
+    breakpoint = size;
+  }
 
   return breakpoint;
 };

@@ -1,6 +1,8 @@
 import React from 'react';
-import Ticket from 'pages/ticket';
-import ComponentLibrary from 'pages/component-library';
+import {
+  ComponentLibrary,
+  Ticket,
+} from 'pages';
 
 const routes = [
   {

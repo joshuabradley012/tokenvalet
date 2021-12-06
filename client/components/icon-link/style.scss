@@ -1,6 +1,7 @@
 @use "~scss/variables" as *;
 
 .icon-link {
+  align-items: center;
   display: inline-flex;
   font-size: 1.4rem;
   text-decoration: none;

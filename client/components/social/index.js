@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
-import classNames from 'lib/classnames';
-import IconLink from 'components/icon-link';
+import { classNames } from 'lib';
+import { IconLink } from 'components';
 
 const Social = ({ className, ...rest }) => (
   <span

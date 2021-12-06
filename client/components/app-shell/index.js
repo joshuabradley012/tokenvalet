@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './style.scss';
-import classNames from 'lib/classnames';
+import { classNames } from 'lib';
 import { useMobile } from 'hooks';
-import AppDrawer from 'components/app-drawer';
-import Icon from 'components/icon';
-import Link from 'components/link';
-import Social from 'components/social';
+import {
+  AppDrawer,
+  Icon,
+  Link,
+  Social,
+} from 'components';
 
-const AppShell = ({ children }) => {
+const AppShell = ({ children, routes }) => {
   const isMobile = useMobile();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
@@ -45,7 +47,11 @@ const AppShell = ({ children }) => {
         </div>
       </div>
       <div className="app-body">
-        <AppDrawer active={isDrawerOpen} onClick={handleCloseDrawerOnMobileClick} />
+        <AppDrawer
+          active={isDrawerOpen}
+          onClick={handleCloseDrawerOnMobileClick}
+          routes={routes}
+        />
         <div className="app-container">
           {children}
         </div>
