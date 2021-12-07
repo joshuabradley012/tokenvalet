@@ -5,6 +5,7 @@
   background: $white;
   height: calc(100vh);
   padding-top: $app-bar-height;
+  padding-bottom: $app-bar-height;
   position: fixed;
   top: 0;
   right: 100%;
@@ -32,16 +33,16 @@
 }
 
 .app-drawer-filler {
-  width: 0;
-  transition: width $transition-time;
+  flex: 0 0 0;
+  transition: flex $transition-time;
 
   &.active {
-    width: $app-drawer-width;
+    flex: 0 0 $app-drawer-width;
   }
 
   @include media-breakpoint-down(md) {
     &.active {
-      width: 0;
+      flex: 0 0 0;
     }
   }
 }

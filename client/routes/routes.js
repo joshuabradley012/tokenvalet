@@ -6,22 +6,38 @@ import {
 
 const routes = [
   {
-    icon: 'qr',
-    name: 'Ticket',
     path: '/ticket',
     component: <Ticket />,
+    icon: 'qr',
+    name: 'Ticket',
+    inNav: true,
+    seo: {
+      title: 'Ticket',
+      description: 'Your valet ticket.',
+    },
   },
   {
-    icon: 'components',
-    name: 'Components',
     path: '/components',
     component: <ComponentLibrary />,
+    icon: 'components',
+    name: 'Components',
+    inNav: true,
+    seo: {
+      title: 'Components',
+      description: 'tokenvalet component library.',
+    },
   },
+  // "/" must be last
   {
-    icon: 'home',
-    name: 'Home',
     path: '/',
     component: <Ticket />,
+    icon: 'home',
+    name: 'Home',
+    inNav: true,
+    seo: {
+      title: 'tokenvalet',
+      description: 'Welcome to tokenvalet.',
+    },
   },
 ];
 

@@ -1,7 +1,8 @@
 @use '~scss/variables' as *;
 
 .qr-section {
-  flex: 0 0 100%;
+  align-items: center;
+  display: flex;
   text-align: center;
 }
 

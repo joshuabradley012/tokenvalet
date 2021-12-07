@@ -22,7 +22,7 @@ const AppDrawer = ({ active, onClick, routes }) => {
           >
             {home.name}
           </IconLink>
-          {routesClone.map(route => (
+          {routesClone.map(route => route.inNav ? (
             <IconLink
               href={route.path}
               onClick={onClick}
@@ -31,7 +31,7 @@ const AppDrawer = ({ active, onClick, routes }) => {
             >
               {route.name}
             </IconLink>
-          ))}
+          ) : null)}
         </div>
       </div>
     </>
