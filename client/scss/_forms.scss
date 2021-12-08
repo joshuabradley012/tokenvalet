@@ -5,7 +5,14 @@
 form {
   background: $white;
   border-radius: $border-radius-lg;
-  padding: $spacer-8;
+  padding: $spacer-6 $spacer-8;
+  margin: $spacer-8 0;
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 (-$spacer-6);
+    padding: $spacer-6;
+    border-radius: 0;
+  }
 
   > :first-child {
     margin-top: 0;
@@ -13,6 +20,13 @@ form {
 
   > :last-child {
     margin-bottom: 0;
+  }
+
+  a:not(.btn) {
+    color: $secondary;
+    font-size: 1.4rem;
+    position: relative;
+    text-decoration: none;
   }
 }
 
@@ -79,9 +93,39 @@ textarea {
 .btn,
 button,
 [type="button"],
-[type="file"]::file-selector-button,
 [type="reset"],
 [type="submit"] {
+  background-color: $secondary;
+  border: 0;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: $spacer-3 $spacer-6;
+  text-align: center;
+  text-decoration: none;
+  transition: $transition-all;
+
+  &:hover {
+    background-color: $secondary-hover;
+  }
+
+  &.transparent {
+    background-color: transparent;
+    color: $secondary;
+
+    &:hover {
+      background-color: $gray-100;
+    }
+  }
+}
+
+// This must be separate from other buttons
+// Adding a .class after a psuedoclass breaks the CSS class
+[type="file"]::file-selector-button {
   background-color: $secondary;
   border: 0;
   border-radius: $border-radius;
@@ -118,6 +162,17 @@ button,
 
   &::file-selector-button {
     margin: 0 $spacer-2 0 0;
+  }
+}
+
+.form-group {
+  .btn,
+  button,
+  [type="button"],
+  [type="file"]::file-selector-button,
+  [type="reset"],
+  [type="submit"] {
+    margin-bottom: 0;
   }
 }
 

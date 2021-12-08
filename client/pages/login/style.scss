@@ -1,0 +1,23 @@
+@use '~scss/variables' as *;
+
+.login-section {
+  align-items: center;
+  display: flex;
+
+  .form-header {
+    text-align: center;
+  }
+
+  .password {
+    margin-bottom: $spacer-2;
+  }
+
+  .form-group {
+    &.form-footer {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-top: $spacer-8;
+    }
+  }
+}

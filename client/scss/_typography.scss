@@ -73,27 +73,6 @@ p {
     color: $secondary;
     position: relative;
     text-decoration: none;
-
-    &::after {
-      background-color: $secondary;
-      content: '';
-      display: block;
-      height: $spacer-0_5;
-      opacity: 1;
-      position: absolute;
-      right: 0;
-      bottom: -$spacer-0_5;
-      left: 0;
-      transition: $transition-all;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      &::after {
-        opacity: 0;
-      }
-    }
   }
 }
 

@@ -6,6 +6,7 @@ import {
   AppDrawer,
   Icon,
   Link,
+  Logo,
   Social,
 } from 'components';
 
@@ -33,7 +34,7 @@ const AppShell = ({ children, routes }) => {
     } else {
       document.body.classList.remove('overflow-hidden');
     }
-  }, [isDrawerOpen]);
+  }, [isMobile, isDrawerOpen]);
 
   return (
     <div className="app-shell">
@@ -42,7 +43,7 @@ const AppShell = ({ children, routes }) => {
         <div className="nav container-fluid">
           <a className="toggle" onClick={handleOpenDrawer}>
             <Icon type="hamburger" active={isDrawerOpen} />
-            <span className="logotype">tokenvalet</span>
+            <Logo />
           </a>
         </div>
       </div>

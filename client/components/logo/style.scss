@@ -1,0 +1,11 @@
+@use "~scss/variables" as *;
+
+.logotype {
+  color: $black;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  text-decoration: none;
+}
+

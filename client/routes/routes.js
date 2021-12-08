@@ -1,7 +1,9 @@
 import React from 'react';
 import {
   ComponentLibrary,
+  Login,
   Ticket,
+  Typography,
 } from 'pages';
 
 const routes = [
@@ -17,6 +19,17 @@ const routes = [
     },
   },
   {
+    path: '/typography',
+    component: <Typography />,
+    icon: 'font',
+    name: 'Typography',
+    inNav: true,
+    seo: {
+      title: 'Typography',
+      description: 'Lorem ipusm example of text.',
+    },
+  },
+  {
     path: '/components',
     component: <ComponentLibrary />,
     icon: 'components',
@@ -25,6 +38,17 @@ const routes = [
     seo: {
       title: 'Components',
       description: 'tokenvalet component library.',
+    },
+  },
+  {
+    path: '/login',
+    component: <Login />,
+    icon: 'user',
+    name: 'Login',
+    inNav: true,
+    seo: {
+      title: 'Login',
+      description: 'Login to tokenvalet.',
     },
   },
   // "/" must be last

@@ -50,16 +50,6 @@
       }
     }
 
-    .logotype {
-      color: $black;
-      align-items: center;
-      display: flex;
-      font-family: 'Outfit', sans-serif;
-      font-size: 2rem;
-      line-height: 1;
-      text-decoration: none;
-    }
-
     @include media-breakpoint-down(md) {
       background: $white;
     }

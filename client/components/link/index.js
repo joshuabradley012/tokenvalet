@@ -4,6 +4,10 @@ import { classNames } from 'lib';
 import { useActivePath } from 'hooks';
 
 const Link = ({ children, className, href, ...rest }) => {
+  if (!href || typeof href !== 'string') {
+    console.error('Links must have an href attribute.');
+  }
+
   const regex = new RegExp('^(https?)?\/\/');
   const isInternal = href.search(regex) === -1;
   const isActivePath = useActivePath(href);
