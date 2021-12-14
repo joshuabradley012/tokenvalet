@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import './style.scss';
-import { routes, Router } from 'routes';
+import { Router } from 'routes';
 import { AppShell } from 'components';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <AppShell routes={routes}>
-        <Router routes={routes} />
+      <AppShell>
+        <Router />
       </AppShell>
     </BrowserRouter>
   );

@@ -3,6 +3,9 @@
 .qr-wrapper {
   background: $white;
   border-radius: $spacer-4;
+  display: flex;
+  margin-top: $spacer-8;
+  margin-bottom: $spacer-8;
   overflow: hidden;
-  box-shadow: $box-shadow-6;
 }
+

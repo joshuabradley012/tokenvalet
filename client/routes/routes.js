@@ -1,15 +1,75 @@
 import React from 'react';
-import {
-  ComponentLibrary,
-  Login,
-  Ticket,
-  Typography,
-} from 'pages';
 
 const routes = [
   {
+    path: '/arrival',
+    component: 'Arrival',
+    icon: 'mapMarker',
+    name: 'Arrival',
+    inNav: true,
+    seo: {
+      title: 'Arrival',
+      description: 'Arrive and park your car.',
+    },
+  },
+  {
+    path: '/components',
+    component: 'ComponentLibrary',
+    icon: 'components',
+    name: 'Components',
+    inNav: true,
+    seo: {
+      title: 'Components',
+      description: 'tokenvalet component library.',
+    },
+  },
+  {
+    path: '/finder',
+    component: 'Finder',
+    icon: 'search',
+    name: 'Finder',
+    inNav: true,
+    seo: {
+      title: 'Finder',
+      description: 'Find any guest, current or past.',
+    },
+  },
+  {
+    path: '/guest-list',
+    component: 'GuestList',
+    icon: 'list',
+    name: 'Guest list',
+    inNav: true,
+    seo: {
+      title: 'Guest list',
+      description: 'See all of the current guests.',
+    },
+  },
+  {
+    path: '/login',
+    component: 'Login',
+    icon: 'user',
+    name: 'Login',
+    inNav: true,
+    seo: {
+      title: 'Login',
+      description: 'Login to tokenvalet.',
+    },
+  },
+  {
+    path: '/return',
+    component: 'Return',
+    icon: 'signOut',
+    name: 'Return',
+    inNav: true,
+    seo: {
+      title: 'Return',
+      description: 'Return your car.',
+    },
+  },
+  {
     path: '/ticket',
-    component: <Ticket />,
+    component: 'Ticket',
     icon: 'qr',
     name: 'Ticket',
     inNav: true,
@@ -20,7 +80,7 @@ const routes = [
   },
   {
     path: '/typography',
-    component: <Typography />,
+    component: 'Typography',
     icon: 'font',
     name: 'Typography',
     inNav: true,
@@ -29,32 +89,10 @@ const routes = [
       description: 'Lorem ipusm example of text.',
     },
   },
-  {
-    path: '/components',
-    component: <ComponentLibrary />,
-    icon: 'components',
-    name: 'Components',
-    inNav: true,
-    seo: {
-      title: 'Components',
-      description: 'tokenvalet component library.',
-    },
-  },
-  {
-    path: '/login',
-    component: <Login />,
-    icon: 'user',
-    name: 'Login',
-    inNav: true,
-    seo: {
-      title: 'Login',
-      description: 'Login to tokenvalet.',
-    },
-  },
   // "/" must be last
   {
     path: '/',
-    component: <Ticket />,
+    component: 'Home',
     icon: 'home',
     name: 'Home',
     inNav: true,

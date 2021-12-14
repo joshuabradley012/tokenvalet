@@ -4,7 +4,7 @@ import { Button } from 'components';
 const Typography = () => (
   <div className="container">
     <div className="row justify-content-center">
-      <div className="col-sm-9 col-md-7 col-lg-6 col-xl-5">
+      <div className="col-auto">
         <h1>Lorem ipsum</h1>
         <p>Dolor sit amet, <a href="//google.com">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing commodo elit. Leo urna molestie at elementum eu facilisis. Mauris vitae ultricies leo integer malesuada nunc vel. Id faucibus nisl tincidunt eget nullam non nisi est. Sit amet risus nullam eget felis eget nunc. </p>
         <blockquote>

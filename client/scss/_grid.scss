@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "variables" as *;
 @use "mixins/breakpoints" as *;
 @use "mixins/grid" as *;
@@ -51,4 +52,13 @@
 }
 
 @include make-grid-columns();
+
+.col-auto {
+  @include make-col-ready();
+  max-width: map.get($container-max-widths, sm);
+
+  @include media-breakpoint-down(sm) {
+    max-width: unset;
+  }
+}
 

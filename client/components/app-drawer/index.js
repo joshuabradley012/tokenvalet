@@ -1,10 +1,11 @@
 import React from 'react';
 import './style.scss';
 import { classNames, clone } from 'lib';
+import { routes } from 'routes';
 import { IconLink } from 'components';
 
 
-const AppDrawer = ({ active, onClick, routes }) => {
+const AppDrawer = ({ active, onClick }) => {
   const activeClassName = active ? 'active' : '';
   const routesClone = clone(routes);
   const home = routesClone.pop();

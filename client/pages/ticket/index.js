@@ -6,7 +6,7 @@ const Ticket = () => (
   <section className="qr-section">
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-sm-9 col-md-7 col-lg-6 col-xl-5">
+        <div className="col-auto">
           <h1>Valet ticket</h1>
           <p>This ticket is saved, <br className="d-sm-none"/> return to this page at any time.</p>
           <Qr id="1234567890" />

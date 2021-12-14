@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button } from 'components';
+import { Button, Qr } from 'components';
 
 const ComponentLibrary = () => (
   <div className="container">
     <div className="row justify-content-center">
-      <div className="col-sm-9 col-md-7 col-lg-6 col-xl-5">
+      <div className="col-auto">
         <h1>Components</h1>
         <p>Displayed below are many of the core components used throughout tokenvalet. They are only superficially functional.</p>
         <form>
@@ -68,6 +68,7 @@ const ComponentLibrary = () => (
           <Button href="/page">Page</Button>
           <Button href="#">Second</Button>
         </form>
+        <Qr id="1234567890" />
       </div>
     </div>
   </div>

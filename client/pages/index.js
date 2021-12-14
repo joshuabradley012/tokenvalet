@@ -1,4 +1,9 @@
+export { default as Arrival } from 'pages/arrival';
 export { default as ComponentLibrary } from 'pages/component-library';
+export { default as Finder } from 'pages/finder';
+export { default as GuestList } from 'pages/guest-list';
+export { default as Home } from 'pages/home';
 export { default as Login } from 'pages/login';
+export { default as Return } from 'pages/return';
 export { default as Ticket } from 'pages/ticket';
 export { default as Typography } from 'pages/typography';
