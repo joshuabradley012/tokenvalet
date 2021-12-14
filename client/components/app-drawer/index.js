@@ -15,14 +15,6 @@ const AppDrawer = ({ active, onClick }) => {
       <div className={classNames('app-drawer-filler', activeClassName)}></div>
       <div className={classNames('app-drawer', activeClassName)}>
         <div className="container-fluid">
-          <IconLink
-            href={home.path}
-            onClick={onClick}
-            key={home.name}
-            type={home.icon}
-          >
-            {home.name}
-          </IconLink>
           {routesClone.map(route => route.inNav ? (
             <IconLink
               href={route.path}

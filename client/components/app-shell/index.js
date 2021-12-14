@@ -44,8 +44,10 @@ const AppShell = ({ children }) => {
         <div className="nav container-fluid">
           <a className="toggle" onClick={handleOpenDrawer}>
             <Icon type="hamburger" active={isDrawerOpen} />
-            <Logo />
           </a>
+          <Link href="/">
+            <Logo />
+          </Link>
         </div>
       </div>
       <div className="app-body">
