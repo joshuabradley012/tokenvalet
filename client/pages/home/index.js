@@ -7,10 +7,10 @@ import {
 } from 'components';
 
 const dashboardLinks = [
-  'Arrival',
-  'Return',
-  'Guest list',
-  'Finder',
+  '/arrival',
+  '/departure',
+  '/guest-list',
+  '/finder',
 ];
 
 const Home = () => (
@@ -21,19 +21,19 @@ const Home = () => (
           <h1>Dashboard</h1>
           <div className="dashboard row gx-8 gy-8">
             {dashboardLinks.map(link => {
-              const route = routes.find(route => route.name === link);
+              const route = routes.find(route => route.path === link);
 
               if (route) {
                 return (
                   <div className="col-6" key={route.path}>
                     <Link className="item" href={route.path}>
-                      <Icon type={route.icon} />
-                      <span>{route.name}</span>
+                      <div className="inner">
+                        <Icon type={route.icon} />
+                        <span>{route.name}</span>
+                      </div>
                     </Link>
                   </div>
                 );
-              } else {
-                return null;
               }
             })}
           </div>

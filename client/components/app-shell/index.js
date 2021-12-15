@@ -15,7 +15,7 @@ const AppShell = ({ children }) => {
   const isMobile = useMobile();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
-  const handleCloseDrawerOnMobileClick = () => {
+  const closeDrawerOnMobile = () => {
     if (isMobile) setDrawerOpen(false);
   };
 
@@ -45,7 +45,7 @@ const AppShell = ({ children }) => {
           <a className="toggle" onClick={handleOpenDrawer}>
             <Icon type="hamburger" active={isDrawerOpen} />
           </a>
-          <Link href="/">
+          <Link href="/" onClick={closeDrawerOnMobile}>
             <Logo />
           </Link>
         </div>
@@ -53,7 +53,7 @@ const AppShell = ({ children }) => {
       <div className="app-body">
         <AppDrawer
           active={isDrawerOpen}
-          onClick={handleCloseDrawerOnMobileClick}
+          onClick={closeDrawerOnMobile}
         />
         <div className="app-container">
           {children}

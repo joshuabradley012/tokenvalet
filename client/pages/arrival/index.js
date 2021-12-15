@@ -18,6 +18,7 @@ const Arrival = () => (
               <option value="2">Vendor</option>
               <option value="3">Restaurant</option>
               <option value="4">Guest of Guests'</option>
+              <option value="5">Return or Repark</option>
               <option value="5">Other</option>
             </select>
             <label>Tag number</label>

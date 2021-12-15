@@ -5,11 +5,11 @@ import { routes } from 'routes';
 import {
   Arrival,
   ComponentLibrary,
+  Departure,
   Finder,
   GuestList,
   Home,
   Login,
-  Return,
   Ticket,
   Typography,
 } from 'pages';
@@ -17,11 +17,11 @@ import {
 const pages = {
   Arrival,
   ComponentLibrary,
+  Departure,
   Finder,
   GuestList,
   Home,
   Login,
-  Return,
   Ticket,
   Typography,
 };

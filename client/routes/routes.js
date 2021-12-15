@@ -24,6 +24,17 @@ const routes = [
     },
   },
   {
+    path: '/departure',
+    component: 'Departure',
+    icon: 'signOut',
+    name: 'Departure',
+    inNav: true,
+    seo: {
+      title: 'Departure',
+      description: 'Depart from your visit.',
+    },
+  },
+  {
     path: '/finder',
     component: 'Finder',
     icon: 'search',
@@ -54,17 +65,6 @@ const routes = [
     seo: {
       title: 'Login',
       description: 'Login to tokenvalet.',
-    },
-  },
-  {
-    path: '/return',
-    component: 'Return',
-    icon: 'signOut',
-    name: 'Return',
-    inNav: true,
-    seo: {
-      title: 'Return',
-      description: 'Return your car.',
     },
   },
   {

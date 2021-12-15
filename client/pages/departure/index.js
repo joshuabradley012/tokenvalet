@@ -1,12 +1,12 @@
 import React from 'react';
 import './style.scss';
 
-const Return = () => (
+const Departure = () => (
   <section>
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-auto">
-          <h1>Return</h1>
+          <h1>Departure</h1>
           <p>Help your guest check out.</p>
           <form>
             <h2>Guest finder</h2>
@@ -19,5 +19,5 @@ const Return = () => (
   </section>
 );
 
-export default Return;
+export default Departure;
 
