@@ -2,15 +2,13 @@
 @use '~scss/mixins/breakpoints' as *;
 
 .home {
-  align-items: center;
-  display: flex;
-  text-align: center;
-
   h1 {
-    margin-bottom: $spacer-8;
+    margin-top: 0;
   }
 
   .dashboard {
+    margin-bottom: $spacer-16;
+
     .item {
       background: $white;
       border-radius: $border-radius-lg;
