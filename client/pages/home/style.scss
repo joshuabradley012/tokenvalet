@@ -2,10 +2,6 @@
 @use '~scss/mixins/breakpoints' as *;
 
 .home {
-  h1 {
-    margin-top: 0;
-  }
-
   .dashboard {
     margin-bottom: $spacer-16;
 
