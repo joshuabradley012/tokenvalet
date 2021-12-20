@@ -5,7 +5,7 @@ import { routes } from 'routes';
 import { IconLink } from 'components';
 
 
-const AppDrawer = ({ active, onClick }) => {
+const AppDrawer = ({ active }) => {
   const activeClassName = active ? 'active' : '';
   const routesClone = clone(routes);
   const home = routesClone.pop();
@@ -15,10 +15,16 @@ const AppDrawer = ({ active, onClick }) => {
       <div className={classNames('app-drawer-filler', activeClassName)}></div>
       <div className={classNames('app-drawer', activeClassName)}>
         <div className="container-fluid">
+          <IconLink
+            href={home.path}
+            key={home.name}
+            type={home.icon}
+          >
+            {home.name}
+          </IconLink>
           {routesClone.map(route => route.inNav ? (
             <IconLink
               href={route.path}
-              onClick={onClick}
               key={route.name}
               type={route.icon}
             >

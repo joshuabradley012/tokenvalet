@@ -1,3 +1,4 @@
+export { default as About } from 'pages/about';
 export { default as Arrival } from 'pages/arrival';
 export { default as ComponentLibrary } from 'pages/component-library';
 export { default as Departure } from 'pages/departure';

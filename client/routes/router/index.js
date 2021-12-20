@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Route, Routes } from 'react-router-dom';
 import { routes } from 'routes';
 import {
+  About,
   Arrival,
   ComponentLibrary,
   Departure,
@@ -15,6 +16,7 @@ import {
 } from 'pages';
 
 const pages = {
+  About,
   Arrival,
   ComponentLibrary,
   Departure,

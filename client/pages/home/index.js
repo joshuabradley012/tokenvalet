@@ -19,7 +19,7 @@ const Home = () => (
       <div className="row justify-content-center">
         <div className="col-auto">
           <h1>Dashboard</h1>
-          <div className="dashboard row gx-8 gy-8">
+          <div className="dashboard row gx-4 gy-4">
             {dashboardLinks.map(link => {
               const route = routes.find(route => route.path === link);
 

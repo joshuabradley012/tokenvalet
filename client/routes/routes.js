@@ -2,6 +2,17 @@ import React from 'react';
 
 const routes = [
   {
+    path: '/about',
+    component: 'About',
+    icon: 'font',
+    name: 'About',
+    inNav: true,
+    seo: {
+      title: 'About',
+      description: 'About tokenvalet.',
+    },
+  },
+  {
     path: '/arrival',
     component: 'Arrival',
     icon: 'mapMarker',
@@ -17,7 +28,7 @@ const routes = [
     component: 'ComponentLibrary',
     icon: 'components',
     name: 'Components',
-    inNav: true,
+    inNav: false,
     seo: {
       title: 'Components',
       description: 'tokenvalet component library.',
@@ -83,7 +94,7 @@ const routes = [
     component: 'Typography',
     icon: 'font',
     name: 'Typography',
-    inNav: true,
+    inNav: false,
     seo: {
       title: 'Typography',
       description: 'Lorem ipusm example of text.',

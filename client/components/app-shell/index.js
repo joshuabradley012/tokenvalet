@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './style.scss';
 import { classNames } from 'lib';
 import { useMobile } from 'hooks';
@@ -13,14 +14,12 @@ import {
 
 const AppShell = ({ children }) => {
   const isMobile = useMobile();
+  const location = useLocation();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
-  const closeDrawerOnMobile = () => {
-    if (isMobile) setDrawerOpen(false);
-  };
+  const handleToggleDrawer = () => setDrawerOpen(!isDrawerOpen);
 
-  const handleOpenDrawer = () => setDrawerOpen(!isDrawerOpen);
-
+  // Update drawer when changing screen size
   useEffect(() => {
     if (isMobile && isDrawerOpen) {
       setDrawerOpen(false);
@@ -28,6 +27,13 @@ const AppShell = ({ children }) => {
       setDrawerOpen(true);
     }
   }, [isMobile]);
+
+  // Close drawer when the location changes on mobile
+  useEffect(() => {
+    if (isMobile) {
+      setDrawerOpen(false);
+    }
+  }, [location])
 
   useEffect(() => {
     if (isMobile && isDrawerOpen) {
@@ -42,19 +48,16 @@ const AppShell = ({ children }) => {
       <div className="app-bar-filler"></div>
       <div className={classNames('app-bar', isDrawerOpen ? '' : 'active')}>
         <div className="nav container-fluid">
-          <a className="toggle" onClick={handleOpenDrawer}>
+          <a className="toggle" onClick={handleToggleDrawer}>
             <Icon type="hamburger" active={isDrawerOpen} />
           </a>
-          <Link href="/" onClick={closeDrawerOnMobile}>
+          <Link href="/">
             <Logo />
           </Link>
         </div>
       </div>
       <div className="app-body">
-        <AppDrawer
-          active={isDrawerOpen}
-          onClick={closeDrawerOnMobile}
-        />
+        <AppDrawer active={isDrawerOpen} />
         <div className="app-container">
           {children}
         </div>
