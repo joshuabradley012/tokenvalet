@@ -4,7 +4,6 @@ import './style.scss';
 
 const GuestDetail = () => {
   const params = useParams();
-  console.log(params);
 
   return (
     <section>
