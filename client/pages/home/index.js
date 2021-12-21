@@ -7,10 +7,10 @@ import {
 } from 'components';
 
 const dashboardLinks = [
-  '/arrival',
-  '/departure',
-  '/guest-list',
-  '/finder',
+  'arrival',
+  'departure',
+  'guests',
+  'finder',
 ];
 
 const Home = () => (

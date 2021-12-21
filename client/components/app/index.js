@@ -7,9 +7,7 @@ import { AppShell } from 'components';
 const App = () => {
   return (
     <BrowserRouter>
-      <AppShell>
-        <Router />
-      </AppShell>
+      <Router />
     </BrowserRouter>
   );
 };

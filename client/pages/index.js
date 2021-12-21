@@ -3,6 +3,7 @@ export { default as Arrival } from 'pages/arrival';
 export { default as ComponentLibrary } from 'pages/component-library';
 export { default as Departure } from 'pages/departure';
 export { default as Finder } from 'pages/finder';
+export { default as GuestDetail } from 'pages/guest-detail';
 export { default as GuestList } from 'pages/guest-list';
 export { default as Home } from 'pages/home';
 export { default as Login } from 'pages/login';

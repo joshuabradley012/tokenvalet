@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import './style.scss';
 import { classNames } from 'lib';
 import { useMobile } from 'hooks';
@@ -35,6 +35,7 @@ const AppShell = ({ children }) => {
     }
   }, [location])
 
+  // Prevent background from scrolling when using nav on mobile
   useEffect(() => {
     if (isMobile && isDrawerOpen) {
       document.body.classList.add('overflow-hidden');
@@ -58,9 +59,9 @@ const AppShell = ({ children }) => {
       </div>
       <div className="app-body">
         <AppDrawer active={isDrawerOpen} />
-        <div className="app-container">
-          {children}
-        </div>
+        <main className="app-container">
+          <Outlet />
+        </main>
       </div>
       <div className="app-footer">
         <div className="nav container-fluid">

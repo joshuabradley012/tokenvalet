@@ -8,6 +8,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
+    // Ensures files load correctly on all subpaths
+    publicPath: '/',
   },
   module: {
     rules: [

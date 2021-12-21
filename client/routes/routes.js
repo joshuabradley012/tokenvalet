@@ -2,8 +2,19 @@ import React from 'react';
 
 const routes = [
   {
-    path: '/about',
-    component: 'About',
+    path: '',
+    element: 'Home',
+    icon: 'home',
+    name: 'Home',
+    inNav: true,
+    seo: {
+      title: 'tokenvalet',
+      description: 'Welcome to tokenvalet.',
+    },
+  },
+  {
+    path: 'about',
+    element: 'About',
     icon: 'font',
     name: 'About',
     inNav: true,
@@ -13,8 +24,8 @@ const routes = [
     },
   },
   {
-    path: '/arrival',
-    component: 'Arrival',
+    path: 'arrival',
+    element: 'Arrival',
     icon: 'mapMarker',
     name: 'Arrival',
     inNav: true,
@@ -24,8 +35,8 @@ const routes = [
     },
   },
   {
-    path: '/components',
-    component: 'ComponentLibrary',
+    path: 'components',
+    element: 'ComponentLibrary',
     icon: 'components',
     name: 'Components',
     inNav: false,
@@ -35,8 +46,8 @@ const routes = [
     },
   },
   {
-    path: '/departure',
-    component: 'Departure',
+    path: 'departure',
+    element: 'Departure',
     icon: 'signOut',
     name: 'Departure',
     inNav: true,
@@ -46,8 +57,8 @@ const routes = [
     },
   },
   {
-    path: '/finder',
-    component: 'Finder',
+    path: 'finder',
+    element: 'Finder',
     icon: 'search',
     name: 'Finder',
     inNav: true,
@@ -57,8 +68,8 @@ const routes = [
     },
   },
   {
-    path: '/guest-list',
-    component: 'GuestList',
+    path: 'guests',
+    element: 'GuestList',
     icon: 'list',
     name: 'Guest list',
     inNav: true,
@@ -66,10 +77,16 @@ const routes = [
       title: 'Guest list',
       description: 'See all of the current guests.',
     },
+    children: [
+      {
+        path: ':guestId',
+        element: 'GuestDetail',
+      },
+    ],
   },
   {
-    path: '/login',
-    component: 'Login',
+    path: 'login',
+    element: 'Login',
     icon: 'user',
     name: 'Login',
     inNav: true,
@@ -79,8 +96,8 @@ const routes = [
     },
   },
   {
-    path: '/ticket',
-    component: 'Ticket',
+    path: 'ticket',
+    element: 'Ticket',
     icon: 'qr',
     name: 'Ticket',
     inNav: true,
@@ -90,26 +107,14 @@ const routes = [
     },
   },
   {
-    path: '/typography',
-    component: 'Typography',
+    path: 'typography',
+    element: 'Typography',
     icon: 'font',
     name: 'Typography',
     inNav: false,
     seo: {
       title: 'Typography',
       description: 'Lorem ipusm example of text.',
-    },
-  },
-  // "/" must be last
-  {
-    path: '/',
-    component: 'Home',
-    icon: 'home',
-    name: 'Home',
-    inNav: true,
-    seo: {
-      title: 'tokenvalet',
-      description: 'Welcome to tokenvalet.',
     },
   },
 ];
