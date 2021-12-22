@@ -1,0 +1,8 @@
+@use '~scss/variables' as *;
+
+.guest-detail {
+  background: $white;
+  border-radius: $border-radius-lg;
+  padding: $spacer-4;
+  margin-top: $spacer-4;
+}

@@ -2,6 +2,7 @@ export { default as App } from 'components/app';
 export { default as AppDrawer } from 'components/app-drawer';
 export { default as AppShell } from 'components/app-shell';
 export { default as Button } from 'components/button';
+export { default as GuestList } from 'components/guest-list';
 export { default as Icon } from 'components/icon';
 export { default as IconLink } from 'components/icon-link';
 export { default as Link } from 'components/link';

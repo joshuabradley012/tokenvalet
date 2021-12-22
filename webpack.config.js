@@ -49,6 +49,7 @@ module.exports = {
     alias: {
       assets: path.resolve(__dirname, 'client/assets/'),
       components: path.resolve(__dirname, 'client/components/'),
+      data: path.resolve(__dirname, 'client/data/'),
       hooks: path.resolve(__dirname, 'client/hooks/'),
       lib: path.resolve(__dirname, 'client/lib/'),
       pages: path.resolve(__dirname, 'client/pages/'),
