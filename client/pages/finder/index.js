@@ -2,27 +2,18 @@ import React, { useEffect, useState } from 'react';
 import './style.scss';
 import { objectIncludes } from 'lib';
 import { guests } from 'data';
-import {
-  Guests,
-} from 'components';
+import { Guests } from 'components';
 
 const Finder = () => {
   const [search, setSearch] = useState('');
   const [foundGuests, setFoundGuests] = useState(guests);
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     setSearch(event.target.value.toLowerCase());
   };
 
   useEffect(() => {
-    const newFoundGuests = guests.filter(guest => {
-      if (objectIncludes(guests, search)) {
-        return true;
-      }
-
-      return false;
-    });
-
+    const newFoundGuests = guests.filter(guest => objectIncludes(guest, search));
     setFoundGuests(newFoundGuests);
   }, [search]);
 

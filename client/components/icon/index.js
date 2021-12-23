@@ -22,8 +22,6 @@ const Icon = ({ active, className, onCircleClick, type, ...rest }) => {
     return console.error('Invalid Icon type.');
   }
 
-  const handleCircleClick = onCircleClick ? onCircleClick : () => null;
-
   return (
     <span
       className={classNames(

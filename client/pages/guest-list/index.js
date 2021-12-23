@@ -1,9 +1,7 @@
 import React from 'react';
 import './style.scss';
 import { guests } from 'data';
-import {
-  Guests,
-} from 'components';
+import { Guests } from 'components';
 
 const GuestList = () => (
   <section className="guest-list-section">

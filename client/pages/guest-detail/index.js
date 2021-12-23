@@ -2,9 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './style.scss';
 import { guests, visits } from 'data';
-import {
-  Visits,
-} from 'components';
+import { Visits } from 'components';
 
 const GuestDetail = () => {
   const { guestId } = useParams();

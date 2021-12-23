@@ -1,8 +1,6 @@
 import React from 'react';
 import './style.scss';
-import {
-  Link,
-} from 'components';
+import { Link } from 'components';
 
 const About = () => (
   <section className="about-section">
