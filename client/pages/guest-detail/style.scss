@@ -24,7 +24,6 @@
 
     .status {
       align-items: center;
-      color: $gray-700;
       display: flex;
       font-size: $font-size-sm;
 
@@ -41,35 +40,6 @@
     .name {
       margin-top: 0;
       margin-bottom: 0;
-    }
-  }
-
-  .visits {
-    .visit {
-      background: $white;
-      border-radius: $border-radius-lg;
-      color: $primary;
-      display: block;
-      overflow: hidden;
-      margin-bottom: $spacer-4;
-      padding: $spacer-4;
-      transition: color $transition-time;
-
-      .header {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .name {
-        margin-top: 0;
-        margin-bottom: 0;
-        transition: color $transition-time;
-      }
-
-      .date {
-        color: $gray-700;
-        transition: color $transition-time;
-      }
     }
   }
 }

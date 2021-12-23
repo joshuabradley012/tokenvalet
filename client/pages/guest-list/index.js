@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 import { guests } from 'data';
 import {
-  GuestList as GuestListComponent,
+  Guests,
 } from 'components';
 
 const GuestList = () => (
@@ -11,7 +11,7 @@ const GuestList = () => (
       <div className="row justify-content-center">
         <div className="col-content">
           <h1>Guest list</h1>
-          <GuestListComponent guests={guests} />
+          <Guests guests={guests} />
         </div>
       </div>
     </div>

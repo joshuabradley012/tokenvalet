@@ -1,11 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import './style.scss';
-import { guests } from 'data';
+import { guests, visits } from 'data';
+import {
+  Visits,
+} from 'components';
 
 const GuestDetail = () => {
   const { guestId } = useParams();
-  const guest = guests.find(guest => guest.license === guestId);
+  const guest = guests.find(guest => guest.id === guestId);
 
   return (
     <section className="guest-detail-section">
@@ -22,35 +25,10 @@ const GuestDetail = () => {
               </div>
               <p className="license">License: {guest.license}</p>
               <p className="vehicle">Vehicle: {guest.car?.color} {guest.car?.make} {guest.car?.model}</p>
-              <p className="last-visit">Last visit: {guest.date}</p>
+              <p className="last-visit">Last visit: {guest.lastVisit}</p>
             </div>
             <h2>Visits</h2>
-            <div className="visits">
-              <div className="visit">
-                <div className="header">
-                  <h3 className="name">Fish House</h3>
-                  <div className="date">11/21/2021</div>
-                </div>
-              </div>
-              <div className="visit">
-                <div className="header">
-                  <h3 className="name">Fish House</h3>
-                  <div className="date">11/21/2021</div>
-                </div>
-              </div>
-              <div className="visit">
-                <div className="header">
-                  <h3 className="name">Fish House</h3>
-                  <div className="date">11/21/2021</div>
-                </div>
-              </div>
-              <div className="visit">
-                <div className="header">
-                  <h3 className="name">Fish House</h3>
-                  <div className="date">11/21/2021</div>
-                </div>
-              </div>
-            </div>
+            <Visits visits={visits} />
           </div>
         </div>
       </div>

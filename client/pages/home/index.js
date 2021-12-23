@@ -5,7 +5,7 @@ import { guests as guestsOriginal } from 'data';
 import { routes } from 'routes';
 import {
   Icon,
-  GuestList,
+  Guests,
   Link,
 } from 'components';
 
@@ -46,7 +46,7 @@ const Home = () => (
             <h2>Guest queue</h2>
             <Link href="/guests">See all</Link>
           </div>
-          <GuestList guests={guests.slice(0, 5)} />
+          <Guests guests={guests.slice(0, 5)} />
         </div>
       </div>
     </div>

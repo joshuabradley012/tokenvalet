@@ -28,6 +28,7 @@ const createTables = async () => {
   await db.query(`CREATE TABLE locations(
     id SERIAL,
     user_id int,
+    name varchar (255),
     address varchar (255),
     PRIMARY KEY (id),
     FOREIGN KEY (user_id)
