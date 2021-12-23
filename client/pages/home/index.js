@@ -22,7 +22,7 @@ const Home = () => (
   <section className="home-section">
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-auto">
+        <div className="col-content">
           <h1>Dashboard</h1>
           <div className="dashboard row gx-4 gy-4">
             {dashboardLinks.map(link => {

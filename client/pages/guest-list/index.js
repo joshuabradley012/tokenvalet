@@ -9,7 +9,7 @@ const GuestList = () => (
   <section className="guest-list-section">
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-auto">
+        <div className="col-content">
           <h1>Guest list</h1>
           <GuestListComponent guests={guests} />
         </div>

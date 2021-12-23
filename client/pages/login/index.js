@@ -10,7 +10,7 @@ const Login = () => (
   <section className="login-section">
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-auto">
+        <div className="col-content">
           <form>
             <div className="form-header">
               <Logo />

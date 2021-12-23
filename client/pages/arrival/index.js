@@ -6,7 +6,7 @@ const Arrival = () => (
   <section className="arrival-section">
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-auto">
+        <div className="col-content">
           <h1>Arrival</h1>
           <p>Help your guest check in.</p>
           <form>

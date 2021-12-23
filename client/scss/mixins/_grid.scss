@@ -42,7 +42,7 @@
   }
 }
 
-@mixin make-col-auto() {
+@mixin make-col-content() {
   flex: 0 0 auto;
   width: auto;
 }
@@ -69,7 +69,7 @@
       }
 
       .row-cols#{$infix}-auto > * {
-        @include make-col-auto();
+        @include make-col-content();
       }
 
       @if $grid-row-columns > 0 {
@@ -81,7 +81,7 @@
       }
 
       .col#{$infix}-auto {
-        @include make-col-auto();
+        @include make-col-content();
       }
 
       @if $columns > 0 {

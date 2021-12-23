@@ -5,7 +5,7 @@ const ComponentLibrary = () => (
   <section className="component-library-section">
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-auto">
+        <div className="col-content">
           <h1>Components</h1>
           <p>Displayed below are many of the core components used throughout tokenvalet. They are only superficially functional.</p>
           <form>

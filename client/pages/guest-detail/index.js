@@ -11,7 +11,7 @@ const GuestDetail = () => {
     <section className="guest-detail-section">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-auto">
+          <div className="col-content">
             <div className="guest-detail">
               <div className="header">
                 <h1 className="name">{guest.name}</h1>

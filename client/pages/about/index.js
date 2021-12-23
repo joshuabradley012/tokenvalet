@@ -8,7 +8,7 @@ const About = () => (
   <section className="about-section">
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-auto">
+        <div className="col-content">
           <h1>About us</h1>
           <p>Our story began when we recognized an opportunity to transform valet service. The valet process faces the same challenge that all workflows suffer from, which is the monitoring and regulating of naturally occurring human error. Some of the best innovations in technology were born to solve this exact challenge. Workflow issues are clearly evident and repetitive to the extent that one wonders why a solution doesn’t already exist in every field. Moreover, we realized that the challenge wasn’t in identifying the problem. The challenge exists in streamlining complex, error-prone processes into intuitive, powerful software.</p>
           <p>At <strong>tokenvalet</strong>, we solve problems by obsessing over simplicity. First, we distill complexity into its fundamental components. Then, we rebuild systems using this deep understanding to create efficiency. Simplicity guides everything we do from communication to product development.</p>

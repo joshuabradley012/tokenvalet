@@ -53,7 +53,7 @@
 
 @include make-grid-columns();
 
-.col-auto {
+.col-content {
   @include make-col-ready();
   max-width: map.get($container-max-widths, sm);
 
