@@ -5,7 +5,7 @@ import {
 } from 'components';
 
 const About = () => (
-  <section className="about">
+  <section className="about-section">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-auto">

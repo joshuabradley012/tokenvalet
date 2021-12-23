@@ -14,15 +14,9 @@
     &:hover {
       color: $secondary;
 
-      h3, .date, .license {
+      .name, .date, .license {
         color: $secondary;
       }
-    }
-
-    h3 {
-      margin-top: 0;
-      margin-bottom: 0;
-      transition: color $transition-time;
     }
 
     .header {
@@ -33,6 +27,12 @@
     .body {
       display: flex;
       justify-content: space-between;
+    }
+
+    .name {
+      margin-top: 0;
+      margin-bottom: 0;
+      transition: color $transition-time;
     }
 
     .date {

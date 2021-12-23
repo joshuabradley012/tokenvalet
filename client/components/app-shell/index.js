@@ -33,6 +33,7 @@ const AppShell = ({ children }) => {
     if (isMobile) {
       setDrawerOpen(false);
     }
+    window.scrollTo(0, 0);
   }, [location])
 
   // Prevent background from scrolling when using nav on mobile

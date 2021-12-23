@@ -6,10 +6,11 @@ import {
 
 const GuestList = ({ guests }) => (
   <div className="guest-list">
+    {/* TODO: replace random with real UID */}
     {guests.map(guest => (
       <Link className="guest" href={`/guests/${guest.license}`} key={Math.random()}>
         <div className="header">
-          <h3>{guest.name}</h3>
+          <h3 className="name">{guest.name}</h3>
           <span className="date">{guest.date}</span>
         </div>
         <div className="body">

@@ -3,7 +3,7 @@ import './style.scss';
 import { Button, Qr } from 'components';
 
 const Ticket = () => (
-  <section className="qr-section">
+  <section className="ticket-section">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-auto">

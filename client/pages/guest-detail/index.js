@@ -8,18 +8,48 @@ const GuestDetail = () => {
   const guest = guests.find(guest => guest.license === guestId);
 
   return (
-    <section>
+    <section className="guest-detail-section">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-auto">
             <div className="guest-detail">
               <div className="header">
-                <span className="profile"></span>
-                <h1>{guest.name}</h1>
+                <h1 className="name">{guest.name}</h1>
+                <div className="status">
+                  <span className="text">Inactive</span>
+                  <span className="indicator inactive"></span>
+                </div>
               </div>
-              <span>{guest.license}</span>
-              <span>{guest.car?.color} {guest.car?.make} {guest.car?.model}</span>
-              <p>Last visit: {guest.date}</p>
+              <p className="license">License: {guest.license}</p>
+              <p className="vehicle">Vehicle: {guest.car?.color} {guest.car?.make} {guest.car?.model}</p>
+              <p className="last-visit">Last visit: {guest.date}</p>
+            </div>
+            <h2>Visits</h2>
+            <div className="visits">
+              <div className="visit">
+                <div className="header">
+                  <h3 className="name">Fish House</h3>
+                  <div className="date">11/21/2021</div>
+                </div>
+              </div>
+              <div className="visit">
+                <div className="header">
+                  <h3 className="name">Fish House</h3>
+                  <div className="date">11/21/2021</div>
+                </div>
+              </div>
+              <div className="visit">
+                <div className="header">
+                  <h3 className="name">Fish House</h3>
+                  <div className="date">11/21/2021</div>
+                </div>
+              </div>
+              <div className="visit">
+                <div className="header">
+                  <h3 className="name">Fish House</h3>
+                  <div className="date">11/21/2021</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -19,7 +19,7 @@ const dashboardLinks = [
 ];
 
 const Home = () => (
-  <section className="home">
+  <section className="home-section">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-auto">

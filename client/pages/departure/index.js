@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 
 const Departure = () => (
-  <section>
+  <section className="departure-section">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-auto">
