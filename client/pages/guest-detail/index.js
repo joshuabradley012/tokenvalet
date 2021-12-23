@@ -16,7 +16,7 @@ const GuestDetail = () => {
         <div className="row justify-content-center">
           <div className="col-content">
             <div className="guest-detail">
-              <div className="header">
+              <div className="header space-between">
                 <h1 className="name">{guest.name}</h1>
                 <div className="status">
                   <span className="text">Inactive</span>

@@ -17,3 +17,15 @@
     }
   }
 }
+
+// Cusomtizations
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+  display: flex;
+}

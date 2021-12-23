@@ -13,21 +13,7 @@
       margin-bottom: 0;
     }
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .body {
-      display: flex;
-      justify-content: space-between;
-    }
-
     .date {
-      color: $gray-700;
-    }
-
-    .license {
       color: $gray-700;
     }
   }

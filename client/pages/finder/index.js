@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.scss';
+import { objectIncludes } from 'lib';
 import { guests } from 'data';
 import {
   Guests,
@@ -15,17 +16,11 @@ const Finder = () => {
 
   useEffect(() => {
     const newFoundGuests = guests.filter(guest => {
-      if (
-        guest.name.toLowerCase().includes(search)
-        || guest.license.toLowerCase().includes(search)
-        || guest.car?.color.toLowerCase().includes(search)
-        || guest.car?.make.toLowerCase().includes(search)
-        || guest.car?.model.toLowerCase().includes(search)
-      ) {
+      if (objectIncludes(guests, search)) {
         return true;
-      } else {
-        return false;
       }
+
+      return false;
     });
 
     setFoundGuests(newFoundGuests);
