@@ -5,7 +5,8 @@ import { useActivePath } from 'hooks';
 
 const Link = ({ children, className, href, ...rest }) => {
   if (href && typeof href !== 'string') {
-    console.error('Links href attribute must be a string.');
+    console.log('Links href attribute must be a string.');
+    return null;
   }
 
   const regex = new RegExp('^(https?)?\/\/');

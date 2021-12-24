@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 import { Link } from 'components';
 
-const Visits = ({ visits }) => (
+const Visits = ({ visits = [] }) => (
   <div className="visits link-list">
     {visits.map(visit => (
       <Link className="visit link" href={`/visits/${visit.id}`} key={visit.id}>
