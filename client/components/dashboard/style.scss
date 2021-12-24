@@ -1,0 +1,52 @@
+@use '~scss/variables' as *;
+
+.dashboard {
+  .item {
+    background: $white;
+    border-radius: $border-radius-lg;
+    color: $primary;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    transition: color $transition-time;
+
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 67.5%;
+    }
+
+    &:hover {
+      color: $secondary;
+
+      .icon {
+        color: $secondary;
+      }
+    }
+
+    .inner {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      padding: $spacer-4;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+
+    .icon {
+      height: $spacer-8;
+      margin-bottom: $spacer-4;
+      width: $spacer-8;
+
+      .circle {
+        display: none;
+      }
+    }
+  }
+}

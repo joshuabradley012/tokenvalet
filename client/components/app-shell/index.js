@@ -19,7 +19,6 @@ const AppShell = ({ children }) => {
 
   const handleToggleDrawer = () => setDrawerOpen(!isDrawerOpen);
 
-  // Update drawer when changing screen size
   useEffect(() => {
     if (isMobile && isDrawerOpen) {
       setDrawerOpen(false);
@@ -28,7 +27,6 @@ const AppShell = ({ children }) => {
     }
   }, [isMobile]);
 
-  // Close drawer when the location changes on mobile
   useEffect(() => {
     if (isMobile) {
       setDrawerOpen(false);
@@ -36,7 +34,6 @@ const AppShell = ({ children }) => {
     window.scrollTo(0, 0);
   }, [location])
 
-  // Prevent background from scrolling when using nav on mobile
   useEffect(() => {
     if (isMobile && isDrawerOpen) {
       document.body.classList.add('overflow-hidden');

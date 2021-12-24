@@ -3,6 +3,7 @@ export { default as AppDrawer } from 'components/app-drawer';
 export { default as AppShell } from 'components/app-shell';
 export { default as BackButton } from 'components/back-button';
 export { default as Button } from 'components/button';
+export { default as Dashboard } from 'components/dashboard';
 export { default as Guests } from 'components/guests';
 export { default as Icon } from 'components/icon';
 export { default as IconLink } from 'components/icon-link';

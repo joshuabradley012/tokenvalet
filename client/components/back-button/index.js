@@ -6,7 +6,7 @@ import { Icon } from 'components';
 const BackButton = () => {
   const navigate = useNavigate();
 
-  const handleClick = () => navigate(-1);;
+  const handleClick = () => navigate(-1);
 
   return (
     <Icon type="arrow-left" className="back-button" onClick={handleClick} />
