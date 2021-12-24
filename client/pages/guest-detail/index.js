@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './style.scss';
 import { guests, visits } from 'data';
-import { Visits } from 'components';
+import { IconLink, Visits } from 'components';
 
 const GuestDetail = () => {
   const { guestId } = useParams();
@@ -23,7 +23,10 @@ const GuestDetail = () => {
               </div>
               <p className="license">License: {guest.license}</p>
               <p className="vehicle">Vehicle: {guest.car?.color} {guest.car?.make} {guest.car?.model}</p>
-              <p className="last-visit">Last visit: {guest.lastVisit}</p>
+              <p className="last-visit space-between align-items-end">
+                <span>Last visit: {guest.lastVisit}</span>
+                <IconLink type="edit" className="left">Edit</IconLink>
+              </p>
             </div>
             <h2>Visits</h2>
             <Visits visits={visits} />

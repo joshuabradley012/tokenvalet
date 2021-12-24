@@ -4,17 +4,26 @@ import { classNames } from 'lib';
 import { useActivePath } from 'hooks';
 
 const Link = ({ children, className, href, ...rest }) => {
-  if (!href || typeof href !== 'string') {
-    console.error('Links must have an href attribute.');
+  if (href && typeof href !== 'string') {
+    console.error('Links href attribute must be a string.');
   }
 
   const regex = new RegExp('^(https?)?\/\/');
-  const isInternal = href.search(regex) === -1;
-  const isActivePath = useActivePath(href);
+  const isInternal = href ? href.search(regex) === -1 : false;
+  const isActivePath = href ? useActivePath(href) : false;
   const activeClassName = isActivePath ? 'active' : '';
 
   let link;
-  if (isInternal) {
+  if (!href) {
+    link = (
+      <span
+        className={classNames('nolink', activeClassName, className)}
+        {...rest}
+      >
+        {children}
+      </span>
+    );
+  } else if (isInternal) {
     link = (
       <RouterLink
         to={href}

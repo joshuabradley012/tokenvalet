@@ -8,11 +8,8 @@ const Departure = () => (
         <div className="col-content">
           <h1>Departure</h1>
           <p>Help your guest check out.</p>
-          <form>
-            <h2>Guest finder</h2>
-            <label>Search</label>
-            <input type="text" />
-          </form>
+          <label>Search</label>
+          <input type="text" />
         </div>
       </div>
     </div>

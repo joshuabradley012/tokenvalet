@@ -2,12 +2,22 @@
 
 .icon-link {
   align-items: center;
+  cursor: pointer;
   display: inline-flex;
-  font-size: 1.4rem;
+  font-size: $font-size-sm;
+  line-height: 1;
   text-decoration: none;
 
   &:focus {
     box-shadow: none;
+  }
+
+  &.left {
+    .text {
+      order: -1;
+      margin-left: 0;
+      margin-right: $spacer-4;
+    }
   }
 
   &.active {
