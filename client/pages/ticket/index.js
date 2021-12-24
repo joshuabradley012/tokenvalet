@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import {  Button, Qr, Section } from 'components';
+import { Button, Qr, Section } from 'components';
 
 const Ticket = () => (
   <Section className="ticket-section" backButton={false}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Button, Qr, Section } from 'components';
+import { Button, Qr, Section } from 'components';
 
 const ComponentLibrary = () => (
   <Section className="component-library-section">

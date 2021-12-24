@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import {  Button, Section } from 'components';
+import { Button, Section } from 'components';
 
 const Arrival = () => (
   <Section className="arrival-section">

@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 import { guests } from 'data';
-import {  Guests, Section } from 'components';
+import { Guests, Section } from 'components';
 
 const GuestList = () => (
   <Section className="guest-list-section">
