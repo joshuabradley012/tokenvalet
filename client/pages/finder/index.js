@@ -13,7 +13,7 @@ const Finder = () => {
   };
 
   useEffect(() => {
-    const newFoundGuests = guests.filter(guest => objectIncludes(guest, search));
+    const newFoundGuests = guests.filter(guest => objectIncludes(guest, search, ['lastVisit']));
     setFoundGuests(newFoundGuests);
   }, [search]);
 
