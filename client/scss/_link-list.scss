@@ -12,8 +12,6 @@
     transition: color $transition-time;
 
     &:hover {
-      color: $secondary;
-
       .link-text {
         color: $secondary;
       }

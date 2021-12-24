@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './style.scss';
 import { objectIncludes } from 'lib';
 import { guests } from 'data';
-import { Guests } from 'components';
+import { BackButton, Guests, Section } from 'components';
 
 const Finder = () => {
   const [search, setSearch] = useState('');
@@ -18,22 +18,16 @@ const Finder = () => {
   }, [search]);
 
   return (
-    <section className="finder-section">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-content">
-            <h1>Finder</h1>
-            <input
-              type="text"
-              placeholder="Search for guests"
-              value={search}
-              onChange={handleChange}
-            />
-            <Guests guests={foundGuests} />
-          </div>
-        </div>
-      </div>
-    </section>
+    <Section className="finder-section">
+      <h1>Finder</h1>
+      <input
+        type="text"
+        placeholder="Search for guests"
+        value={search}
+        onChange={handleChange}
+      />
+      <Guests guests={foundGuests} />
+    </Section>
   );
 };
 

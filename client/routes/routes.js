@@ -26,7 +26,7 @@ const routes = [
   {
     path: 'arrival',
     element: 'Arrival',
-    icon: 'mapMarker',
+    icon: 'map-marker',
     name: 'Arrival',
     inNav: true,
     seo: {
@@ -48,7 +48,7 @@ const routes = [
   {
     path: 'departure',
     element: 'Departure',
-    icon: 'signOut',
+    icon: 'sign-out',
     name: 'Departure',
     inNav: true,
     seo: {
@@ -117,6 +117,23 @@ const routes = [
       description: 'Lorem ipusm example of text.',
     },
   },
+  //{
+  //  path: 'visits',
+  //  element: 'VisitList',
+  //  icon: 'car',
+  //  name: 'Visits',
+  //  inNav: true,
+  //  seo: {
+  //    title: 'Visits',
+  //    description: 'See all visits.',
+  //  },
+  //  children: [
+  //    {
+  //      path: ':visitId',
+  //      element: 'VisitList',
+  //    },
+  //  ],
+  //},
 ];
 
 export default routes;

@@ -39,7 +39,6 @@ const createElement = route => {
           <title>{route.seo?.title}</title>
           <meta name="description"  content={route.seo?.description} />
         </Helmet>
-        {/* Invoking the element does not render stateful components correctly */}
         {React.createElement(pages[route.element])}
       </>
     );

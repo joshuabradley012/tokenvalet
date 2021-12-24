@@ -1,20 +1,4 @@
 @use '~scss/variables' as *;
 
 .search-results {
-  .search-result {
-    background: $white;
-    border-radius: $border-radius-lg;
-    overflow: hidden;
-    margin-bottom: $spacer-4;
-    padding: $spacer-4;
-
-    h3 {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    .date {
-      color: $gray-700;
-    }
-  }
 }

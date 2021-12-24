@@ -45,6 +45,10 @@
         height: $spacer-8;
         margin-bottom: $spacer-4;
         width: $spacer-8;
+
+        .circle {
+          display: none;
+        }
       }
     }
   }

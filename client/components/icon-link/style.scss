@@ -4,7 +4,7 @@
   align-items: center;
   cursor: pointer;
   display: inline-flex;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   line-height: 1;
   text-decoration: none;
 
@@ -13,10 +13,12 @@
   }
 
   &.left {
+    font-size: $font-size-sm;
+
     .text {
       order: -1;
       margin-left: 0;
-      margin-right: $spacer-4;
+      margin-right: $spacer-2;
     }
   }
 
