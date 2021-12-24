@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import { BackButton, Link, Section } from 'components';
+import { Link, Section } from 'components';
 
 const About = () => (
   <Section className="about-section">

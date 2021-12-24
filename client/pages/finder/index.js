@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './style.scss';
 import { objectIncludes } from 'lib';
 import { guests } from 'data';
-import { BackButton, Guests, Section } from 'components';
+import {  Guests, Section } from 'components';
 
 const Finder = () => {
   const [search, setSearch] = useState('');

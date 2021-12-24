@@ -1,5 +1,5 @@
 import React from 'react';
-import { BackButton, Button, Section } from 'components';
+import {  Button, Section } from 'components';
 
 const Typography = () => (
   <Section className="typography-section">

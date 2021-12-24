@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import { BackButton, Section } from 'components';
+import {  Section } from 'components';
 
 const Departure = () => (
   <Section className="departure-section">
