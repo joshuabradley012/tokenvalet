@@ -22,7 +22,7 @@ const clone = object => {
   } else if (object instanceof Function) {
     return object.bind({});
 
-  } else if (typeof object === 'object') {
+  } else if (object instanceof Object) {
     const copy = {};
     for (let key in object) copy[key] = clone(object[key]);
     return copy;
