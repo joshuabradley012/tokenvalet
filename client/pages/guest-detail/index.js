@@ -14,7 +14,7 @@ const GuestDetail = () => {
 
   return (
     <Section className="guest-detail-section">
-      <div className="guest-detail">
+      <div className="guest-detail card">
         <div className="header space-between">
           <h1 className="name">{guest.name}</h1>
           <div className="status">
@@ -30,7 +30,7 @@ const GuestDetail = () => {
         </p>
       </div>
       <h2>Visits</h2>
-      <Visits visits={visits} />
+      <Visits data={visits} />
     </Section>
   );
 };

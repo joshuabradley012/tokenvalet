@@ -9,3 +9,5 @@ export { default as Home } from 'pages/home';
 export { default as Login } from 'pages/login';
 export { default as Ticket } from 'pages/ticket';
 export { default as Typography } from 'pages/typography';
+export { default as VisitDetail } from 'pages/visit-detail';
+export { default as VisitList } from 'pages/visit-list';

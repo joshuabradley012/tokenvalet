@@ -1,14 +1,12 @@
 @use "variables" as *;
+@use "card";
 
 .link-list {
   .link {
-    background: $white;
-    border-radius: $border-radius-lg;
+    @extend .card;
     color: $primary;
     display: block;
-    overflow: hidden;
     margin-bottom: $spacer-4;
-    padding: $spacer-4;
     transition: color $transition-time;
 
     &:hover {

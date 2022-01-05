@@ -26,7 +26,7 @@ const Home = () => (
       <h2>Guest queue</h2>
       <Link href="/guests">See all</Link>
     </div>
-    <Guests guests={guests.slice(0, 5)} />
+    <Guests data={guests.slice(0, 5)} />
   </Section>
 );
 

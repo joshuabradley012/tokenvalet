@@ -1,12 +1,11 @@
 @use '~scss/variables' as *;
+@use '~scss/card' as *;
 
 .dashboard {
   .item {
-    background: $white;
-    border-radius: $border-radius-lg;
+    @extend .card;
     color: $primary;
     display: block;
-    overflow: hidden;
     position: relative;
     transition: color $transition-time;
 

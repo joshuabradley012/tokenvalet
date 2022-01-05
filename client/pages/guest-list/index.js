@@ -6,7 +6,7 @@ import { Guests, Section } from 'components';
 const GuestList = () => (
   <Section className="guest-list-section">
     <h1>Guest list</h1>
-    <Guests guests={guests} />
+    <Guests data={guests} />
   </Section>
 );
 

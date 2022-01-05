@@ -3,33 +3,8 @@ import { Helmet } from 'react-helmet';
 import { Outlet, Routes, Route, useRoutes } from 'react-router-dom';
 import { routes } from 'routes';
 import { AppShell } from 'components';
-import {
-  About,
-  Arrival,
-  ComponentLibrary,
-  Departure,
-  Finder,
-  GuestDetail,
-  GuestList,
-  Home,
-  Login,
-  Ticket,
-  Typography,
-} from 'pages';
+import * as pages from 'pages';
 
-const pages = {
-  About,
-  Arrival,
-  ComponentLibrary,
-  Departure,
-  Finder,
-  GuestDetail,
-  GuestList,
-  Home,
-  Login,
-  Ticket,
-  Typography,
-};
 
 const createElement = route => {
   if (route.element && pages[route.element]) {

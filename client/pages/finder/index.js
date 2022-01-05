@@ -26,7 +26,7 @@ const Finder = () => {
         value={search}
         onChange={handleChange}
       />
-      <Guests guests={foundGuests} />
+      <Guests data={foundGuests} />
     </Section>
   );
 };

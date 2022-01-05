@@ -2,9 +2,9 @@ import React from 'react';
 import './style.scss';
 import { Link } from 'components';
 
-const Visits = ({ visits = [] }) => (
+const Visits = ({ data = [] }) => (
   <div className="visits link-list">
-    {visits.map(visit => (
+    {data.map(visit => (
       <Link className="visit link" href={`/visits/${visit.id}`} key={visit.id}>
         <div className="space-between">
           <h3 className="name link-text">{visit.name}</h3>

@@ -117,23 +117,23 @@ const routes = [
       description: 'Lorem ipusm example of text.',
     },
   },
-  //{
-  //  path: 'visits',
-  //  element: 'VisitList',
-  //  icon: 'car',
-  //  name: 'Visits',
-  //  inNav: true,
-  //  seo: {
-  //    title: 'Visits',
-  //    description: 'See all visits.',
-  //  },
-  //  children: [
-  //    {
-  //      path: ':visitId',
-  //      element: 'VisitList',
-  //    },
-  //  ],
-  //},
+  {
+    path: 'visits',
+    element: 'VisitList',
+    icon: 'calendar',
+    name: 'Visits',
+    inNav: true,
+    seo: {
+      title: 'Visits',
+      description: 'See all visits.',
+    },
+    children: [
+      {
+        path: ':visitId',
+        element: 'VisitDetail',
+      },
+    ],
+  },
 ];
 
 export default routes;

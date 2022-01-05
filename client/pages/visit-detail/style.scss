@@ -1,7 +1,7 @@
 @use '~scss/variables' as *;
 
-.guest-detail-section {
-  .guest-detail {
+.visit-detail-section {
+  .visit-detail {
     margin-top: $spacer-8;
 
     > :first-child {
@@ -17,21 +17,6 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: $spacer-4;
-    }
-
-    .status {
-      align-items: center;
-      display: flex;
-      font-size: $font-size-sm;
-
-      .indicator {
-        background: $gray;
-        border-radius: 50%;
-        display: block;
-        height: $spacer-4;
-        width: $spacer-4;
-        margin-left: $spacer-2;
-      }
     }
 
     .name {
