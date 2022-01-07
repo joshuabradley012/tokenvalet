@@ -8,7 +8,7 @@ import {
 } from 'components';
 
 const Login = () => (
-  <Section className="ticket-section" backButton={false}>
+  <Section className="login-section" backButton={false}>
     <form>
       <div className="form-header">
         <Logo />
