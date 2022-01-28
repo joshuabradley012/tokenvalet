@@ -3,7 +3,7 @@ import './style.scss';
 import { classNames } from 'lib';
 import { Icon, Link } from 'components';
 
-const IconLink = ({ children, className, href, type, ...rest }) => {
+const IconLink = ({ active, children, className, href, type, ...rest }) => {
   const [isActive, setActive] = useState(false);
 
   const handleMouseEnter = () => setActive(true);
@@ -11,13 +11,17 @@ const IconLink = ({ children, className, href, type, ...rest }) => {
 
   return (
     <Link
-      className={classNames('icon-link', className)}
+      className={classNames(
+        'icon-link',
+        className,
+        active || isActive ? 'active' : '',
+      )}
       href={href}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       {...rest}
     >
-      <Icon type={type} active={isActive} />
+      <Icon type={type} />
       {children ? <span className="text">{children}</span> : null}
     </Link>
   );

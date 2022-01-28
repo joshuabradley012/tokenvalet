@@ -6,7 +6,7 @@ import { useMobile } from 'hooks';
 import { routes } from 'routes';
 import {
   AppDrawer,
-  Icon,
+  IconLink,
   Link,
   Logo,
   Social,
@@ -48,7 +48,7 @@ const AppShell = ({ children }) => {
       <div className={classNames('app-bar', isDrawerOpen ? '' : 'active')}>
         <div className="nav container-fluid">
           <a className="toggle" onClick={handleToggleDrawer}>
-            <Icon type="hamburger" active={isDrawerOpen} />
+            <IconLink type="hamburger" active={isDrawerOpen} />
           </a>
           <Link href="/">
             <Logo />

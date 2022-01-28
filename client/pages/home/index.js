@@ -23,7 +23,7 @@ const Home = () => (
     <h1>Dashboard</h1>
     <Dashboard links={dashboardLinks} />
     <div className="heading-link space-between align-items-center">
-      <h2>Guest queue</h2>
+      <h2>Guest list</h2>
       <Link href="/guests">See all</Link>
     </div>
     <Guests data={guests.slice(0, 5)} />

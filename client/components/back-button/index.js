@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.scss';
-import { Icon } from 'components';
+import { IconLink } from 'components';
 
 const BackButton = () => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ const BackButton = () => {
   const handleClick = () => navigate(-1);
 
   return (
-    <Icon type="arrow-left" className="back-button" onClick={handleClick} />
+    <IconLink type="arrow-left" className="back-button" onClick={handleClick} />
   );
 };
 

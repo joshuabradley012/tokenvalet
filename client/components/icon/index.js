@@ -26,21 +26,13 @@ const Icon = ({ active, className, onCircleClick, type, ...rest }) => {
     return null;
   }
 
-  const [isActive, setActive] = useState(false);
-
-  const handleMouseEnter = () => setActive(true);
-  const handleMouseLeave = () => setActive(false);
-
   return (
     <span
       className={classNames(
         'icon',
         type,
         className,
-        active || isActive ? 'active' : '',
       )}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       {...rest}
     >
       <span className="circle"></span>

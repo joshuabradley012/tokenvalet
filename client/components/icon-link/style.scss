@@ -37,8 +37,9 @@
   }
 
   .text {
-    margin-left: $spacer-6;
     color: $primary;
+    margin-left: $spacer-6;
+    transition: $transition-all;
   }
 }
 
