@@ -14,7 +14,7 @@ const guests = clone(guestsOriginal);
 const dashboardLinks = [
   'arrival',
   'departure',
-  'guests',
+  'scan',
   'finder',
 ];
 

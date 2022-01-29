@@ -7,6 +7,7 @@ export { default as GuestDetail } from 'pages/guest-detail';
 export { default as GuestList } from 'pages/guest-list';
 export { default as Home } from 'pages/home';
 export { default as Login } from 'pages/login';
+export { default as Scan } from 'pages/scan';
 export { default as Ticket } from 'pages/ticket';
 export { default as Typography } from 'pages/typography';
 export { default as VisitDetail } from 'pages/visit-detail';

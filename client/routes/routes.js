@@ -96,6 +96,17 @@ const routes = [
     },
   },
   {
+    path: 'scan',
+    element: 'Scan',
+    icon: 'camera',
+    name: 'Scan',
+    inNav: true,
+    seo: {
+      title: 'Scan',
+      description: 'Scan a guest ticket.',
+    },
+  },
+  {
     path: 'ticket',
     element: 'Ticket',
     icon: 'qr',
