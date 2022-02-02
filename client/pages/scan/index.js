@@ -1,32 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './style.scss';
+import { useMediaStream } from 'hooks';
 import { Icon, Section } from 'components';
 
 const Scan = () => {
-  const [camera, setCamera] = useState(null);
+  const videoRef = useRef(null);
 
-  useEffect(() => {
-    const getMedia = async () => {
-      let stream = null;
+  const mediaStream = useMediaStream({
+    audio: false,
+    video: {
+      facingMode: 'environment',
+    },
+  });
 
-      try {
-        stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        setCamera(stream);
-      } catch (err) {
-        console.error(err);
-      }
-    };
+  if (mediaStream && videoRef.current && !videoRef.current.srcObject) {
+    videoRef.current.srcObject = mediaStream;
+  }
 
-    getMedia().catch(console.error);
-  }, []);
+  const handleCanPlay = () => videoRef.current.play();
 
   return (
     <Section className="scan-section">
-      <div className="header space-between align-items-center">
-        <h1>Scan</h1>
-        <Icon type="search" />
-      </div>
+      <h1>Scan</h1>
       <div className="scanner">
+        <video className="video" ref={videoRef} onCanPlay={handleCanPlay} autoPlay playsInline muted />
+        <div className="indicator-top-left" />
+        <div className="indicator-top-right" />
+        <div className="indicator-bottom-left" />
+        <div className="indicator-bottom-right" />
+        <div className="indicator-center" />
       </div>
     </Section>
   );
