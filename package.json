@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.16.7",
     "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "pg": "^8.7.1",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.33.0",
     "@babel/core": "^7.14.0",
+    "@babel/plugin-transform-runtime": "^7.16.10",
     "@babel/preset-env": "^7.14.0",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",

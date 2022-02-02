@@ -1,6 +1,9 @@
 require('./env.js');
-const path = require('path');
 const express = require('express');
+const fs = require('fs');
+const https = require('https');
+const path = require('path');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -11,6 +14,19 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
-app.listen(port, () => {
-  console.log(`Server is listening on http://localhost:${port}`);
-});
+if (process.env.ENV === 'LOCAL') {
+  const credentials = {
+    key: fs.readFileSync(path.join(__dirname, './key.pem'), 'utf8'),
+    cert: fs.readFileSync(path.join(__dirname, './cert.pem'), 'utf8'),
+  };
+
+  const server = https.createServer(credentials, app);
+
+  server.listen(port, () => {
+    console.log(`Server is listening on https://localhost:${port}`);
+  });
+} else {
+  app.listen(port, () => {
+    console.log(`Server is listening on http://localhost:${port}`);
+  });
+}
