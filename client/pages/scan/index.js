@@ -1,35 +1,28 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './style.scss';
-import { useMediaStream } from 'hooks';
-import { Icon, Section } from 'components';
+import { Icon, Scanner, Section } from 'components';
 
 const Scan = () => {
-  const videoRef = useRef(null);
+  const navigate = useNavigate();
+  const [error, setError] = useState('');
 
-  const mediaStream = useMediaStream({
-    audio: false,
-    video: {
-      facingMode: 'environment',
-    },
-  });
-
-  if (mediaStream && videoRef.current && !videoRef.current.srcObject) {
-    videoRef.current.srcObject = mediaStream;
-  }
-
-  const handleCanPlay = () => videoRef.current.play();
+  const handleScan = data => {
+    const regex = new RegExp('^(?:https?:)?//(?:www\.)?tokenvalet\.com/guests/(\d+)', 'i');
+    const match = data.match(regex);
+    if (match && match[0]) {
+      const userId = match[0];
+      navigate(`/guests/${userId}`);
+    } else {
+      setError(`Invalid URL scanned: ${data}`);
+    }
+  };
 
   return (
     <Section className="scan-section">
       <h1>Scan</h1>
-      <div className="scanner">
-        <video className="video" ref={videoRef} onCanPlay={handleCanPlay} autoPlay playsInline muted />
-        <div className="indicator-top-left" />
-        <div className="indicator-top-right" />
-        <div className="indicator-bottom-left" />
-        <div className="indicator-bottom-right" />
-        <div className="indicator-center" />
-      </div>
+      <Scanner onScan={handleScan} />
+      {error ? <p className="error">{error}</p> : null}
     </Section>
   );
 };

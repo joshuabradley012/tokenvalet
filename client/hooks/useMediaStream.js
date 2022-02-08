@@ -22,7 +22,7 @@ const useMediaStream = constraints => {
         mediaStream.getTracks().forEach(track => track.stop());
       }
     }
-  }, [mediaStream, constraints]);
+  }, []);
 
   return mediaStream;
 };

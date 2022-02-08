@@ -24,7 +24,7 @@ form {
 
   a:not(.btn) {
     color: $secondary;
-    font-size: 1.4rem;
+    font-size: $font-size-md;
     position: relative;
     text-decoration: none;
   }
@@ -102,7 +102,7 @@ button,
   color: $white;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: $font-size-md;
   line-height: 1;
   padding: $spacer-3 $spacer-6;
   text-align: center;
@@ -133,7 +133,7 @@ button,
   color: $white;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: $font-size-md;
   line-height: 1;
   padding: $spacer-3 $spacer-6;
   text-align: center;

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDimensions, useResize } from 'hooks';
+import { useDimensions } from 'hooks';
 
 // These values must match $grid-breakpoints from scss/variables
 const defaultBreakpoints = {

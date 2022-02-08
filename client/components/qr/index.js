@@ -5,7 +5,7 @@ import './style.scss';
 const Qr = ({ id = null }) => {
   let svg = '';
 
-  QRCode.toString(`https://tokenvalet.com/qr?id=${id}`, (error, svgString) => {
+  QRCode.toString(`https://tokenvalet.com/guests/${id}`, (error, svgString) => {
     svg = svgString;
   });
 

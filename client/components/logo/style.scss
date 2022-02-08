@@ -1,8 +1,9 @@
 @use "~scss/variables" as *;
 
 .logotype {
-  color: $black;
   align-items: center;
+  color: $black;
+  display: flex;
   font-family: 'Outfit', sans-serif;
   font-size: 2rem;
   line-height: 1;
