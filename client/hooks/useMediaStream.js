@@ -4,12 +4,12 @@ const useMediaStream = constraints => {
   const [mediaStream, setMediaStream] = useState(null);
 
   useEffect(() => {
-    const getMedia = async () => {
-      let stream = null;
+    let streamRef = null;
 
+    const getMedia = async () => {
       try {
-        stream = await navigator.mediaDevices.getUserMedia(constraints);
-        setMediaStream(stream);
+        streamRef = await navigator.mediaDevices.getUserMedia(constraints);
+        setMediaStream(streamRef);
       } catch (err) {
         console.error(err);
       }
@@ -17,10 +17,10 @@ const useMediaStream = constraints => {
 
     if (!mediaStream) {
       getMedia().catch(console.error);
-    } else {
-      return () => {
-        mediaStream.getTracks().forEach(track => track.stop());
-      }
+    }
+
+    return function cleanup() {
+      streamRef.getTracks().forEach(track => track.stop());
     }
   }, []);
 

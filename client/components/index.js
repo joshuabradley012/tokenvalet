@@ -11,6 +11,7 @@ export { default as Link } from 'components/link';
 export { default as Logo } from 'components/logo';
 export { default as Qr } from 'components/qr';
 export { default as Scanner } from 'components/scanner';
+export { default as GuestSearch } from 'components/search';
 export { default as Section } from 'components/section';
 export { default as Social } from 'components/social';
 export { default as Visits } from 'components/visits';

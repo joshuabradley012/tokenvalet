@@ -10,6 +10,7 @@ const Scanner = ({ onScan = defaultOnScan }) => {
   const delay = 500;
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
+  let timer = null;
 
   const mediaStream = useMediaStream({
     audio: false,
@@ -60,12 +61,16 @@ const Scanner = ({ onScan = defaultOnScan }) => {
     if (decoded?.data) {
       onScan(decoded.data);
     } else {
-      setTimeout(scanQr, delay);
+      timer = setTimeout(scanQr, delay);
     }
   };
 
   useEffect(() => {
-    setTimeout(scanQr, delay);
+    timer = setTimeout(scanQr, delay);
+
+    return function cleanup() {
+      clearTimeout(timer);
+    }
   }, []);
 
   return (
